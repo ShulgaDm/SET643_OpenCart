@@ -7,21 +7,15 @@ using System.Threading.Tasks;
 
 namespace OpenCartTests.Pages
 {
-    public abstract class AHeadComponent
+    public abstract class ALeftMenuComponent : AStatusBarComponent
     {
-        public class DropdownOptions
-        {
-            // внутрішній клас
-        }
-
         // fields
 
-        public AHeadComponent(IWebDriver driver)
+        public ALeftMenuComponent(IWebDriver driver) : base(driver)
         {
             // constructor
         }
 
         // Methods
-        
     }
 }

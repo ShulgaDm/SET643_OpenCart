@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using OpenCartTests.Tools;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -8,7 +9,7 @@ namespace OpenCartTests
 {
     // TODO
     [TestFixture]
-    public class FeedbackTests
+    public class FeedbackTests : TestRunner
     {
         [Test]
         public void Test1()
