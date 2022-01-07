@@ -9,10 +9,23 @@ namespace OpenCartTests.Pages
 {
     public abstract class AUnloggedRightMenuComponent : AStatusBarComponent
     {
-        // fields
+        public IWebElement AddressBookButton { get; private set; }
         public AUnloggedRightMenuComponent(IWebDriver driver) : base(driver)
         {
-            // constructor
+            AddressBookButton = driver.FindElement(By.XPath("//a[contains(@href, 'address')]"));
+        }
+
+        // Atomic Methods
+
+        // AddressBookButton
+
+        public void ClickAddressBookButton() => AddressBookButton.Click();
+
+        // Business Logic
+
+        public LoginPage unloggedClickAddressBookButton()
+        {
+            return new LoginPage(driver);
         }
     }
 }
