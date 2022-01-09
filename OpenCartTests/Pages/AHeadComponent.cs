@@ -59,8 +59,11 @@ namespace OpenCartTests.Pages
             }
         }
 
+        protected readonly string TAG_ATTRIBUTE_VALUE = "value";
+
         protected IWebDriver driver;
         private DropdownOptions dropdownOptions;
+
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
 
@@ -98,9 +101,9 @@ namespace OpenCartTests.Pages
 
         // Business Logic
 
-        public LoginPage ClickMyAccountOptionLogin(string optionName)
+        public LoginPage GoToLoginPage()
         {
-            ClickMyAccountOptionByPartialName(optionName);
+            ClickMyAccountOptionByPartialName("Login");
             return new LoginPage(driver);
         }
     }

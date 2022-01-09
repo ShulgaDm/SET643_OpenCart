@@ -9,10 +9,21 @@ namespace OpenCartTests.Pages
 {
     public abstract class ARightMenuComponent : AStatusBarComponent
     {
-        // fields
+        public IWebElement AddressBook { get; private set; }
         public ARightMenuComponent(IWebDriver driver) : base(driver)
         {
-            // constructor
+            AddressBook = driver.FindElement(By.XPath("//*[text()='Address Book']"));
+        }
+
+        // AddressBook
+        public void ClickAddressBook() => AddressBook.Click();
+
+        // Business Logic
+
+        public AddressBookPage GoToAddressBookPage()
+        {
+            ClickAddressBook();
+            return new AddressBookPage(driver);
         }
     }
 }

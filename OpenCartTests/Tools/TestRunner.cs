@@ -13,10 +13,10 @@ namespace OpenCartTests.Tools
     public abstract class TestRunner
     {
         protected IWebDriver driver;
-        private readonly string OpenCartURL = "http://cart/";
+        protected abstract string OpenCartURL { get; } 
 
-        [OneTimeSetUp]
-        public void BeforeAllMethods()
+        [SetUp]
+        public void BeforeEachMethod()
         {
 
             driver = new ChromeDriver();
@@ -25,10 +25,10 @@ namespace OpenCartTests.Tools
             driver.Navigate().GoToUrl(OpenCartURL);
         }
 
-        [OneTimeTearDown]
-        public void AfterAllMethods()
+        [TearDown]
+        public void AfterEachMethod()
         {
-            // driver.Quit();
+            driver.Quit();
         }
 
         protected HomePage LoadApplication()
