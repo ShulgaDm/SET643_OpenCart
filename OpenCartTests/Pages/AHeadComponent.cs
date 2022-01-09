@@ -66,12 +66,13 @@ namespace OpenCartTests.Pages
 
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
-
+        public IWebElement SearchProductButton { get; private set; }
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
             SearchProductField = driver.FindElement(By.Name("search"));
+            SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
         }
 
         // Atomic Methods
@@ -91,6 +92,14 @@ namespace OpenCartTests.Pages
         // SearchProductField
 
         public void ClickSearchProductField() => SearchProductField.Click();
+        public void SetSearchProductField(string text)
+        {
+            SearchProductField.SendKeys(text);
+        }
+        public void ClearSearchProductField()
+        {
+            SearchProductField.Clear();
+        }
 
         // Dropdown Methods
 

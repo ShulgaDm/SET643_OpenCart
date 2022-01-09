@@ -10,7 +10,12 @@ namespace OpenCartTests.Pages
     public class HomePage : AHeadComponent
     {
         public HomePage(IWebDriver driver) : base(driver) { }
-
-       // TODO
+        public ASearchCriteriaComponent FindProduct(string searchText)
+        {
+            ClearSearchProductField();
+            SetSearchProductField(searchText);
+            SetSearchProductField(Keys.Enter);
+            return new SearchResultPage(driver);
+        }
     }
 }
