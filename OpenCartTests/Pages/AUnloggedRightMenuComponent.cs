@@ -10,9 +10,12 @@ namespace OpenCartTests.Pages
     public abstract class AUnloggedRightMenuComponent : AStatusBarComponent
     {
         public IWebElement AddressBookButton { get; private set; }
+       
+        
         public AUnloggedRightMenuComponent(IWebDriver driver) : base(driver)
         {
             AddressBookButton = driver.FindElement(By.XPath("//a[contains(@href, 'address')]"));
+      
         }
 
         // Atomic Methods
@@ -20,6 +23,7 @@ namespace OpenCartTests.Pages
         // AddressBookButton
 
         public void ClickAddressBookButton() => AddressBookButton.Click();
+    
 
         // Business Logic
 
