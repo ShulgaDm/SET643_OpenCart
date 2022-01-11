@@ -13,6 +13,9 @@ namespace OpenCartTests.Tests.Cristina_Budzinska
     public class SearchPageTest: TestRunner 
     {
         protected override string OpenCartURL { get => "http://opencart"; }
+        private readonly string TAG_ATTRIBUTE_CLASS = "class";
+        private readonly string OPTION_ACTIVE = "active";
+
         [Test]
         public void SearchResultPageTest()
         {
@@ -23,6 +26,18 @@ namespace OpenCartTests.Tests.Cristina_Budzinska
 
             string actualResult = resultPage.ResultPageHeader.Text;
             Assert.AreEqual(expectedResult, actualResult);   //check if page header equals expected result
+        }
+        [Test]
+        public void SearchResultPageListGridViewTests()
+        {
+            HomePage homePage = new HomePage(driver);
+
+            SearchResultPage resultPage = (SearchResultPage)homePage.FindProduct("iPhone");
+            resultPage.ClickButtonListView();
+            Assert.IsTrue(resultPage.ButtonListView.GetAttribute(TAG_ATTRIBUTE_CLASS).Contains(OPTION_ACTIVE));   //check if list view active
+
+            resultPage.ClickButtonGridView();
+            Assert.IsTrue(resultPage.ButtonGridView.GetAttribute(TAG_ATTRIBUTE_CLASS).Contains(OPTION_ACTIVE));  //check if grid view active
         }
     }
 }

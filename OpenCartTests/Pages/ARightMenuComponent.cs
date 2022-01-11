@@ -10,13 +10,17 @@ namespace OpenCartTests.Pages
     public abstract class ARightMenuComponent : AStatusBarComponent
     {
         public IWebElement AddressBook { get; private set; }
+        public IWebElement WishListButton { get; private set; }
         public ARightMenuComponent(IWebDriver driver) : base(driver)
         {
             AddressBook = driver.FindElement(By.XPath("//*[text()='Address Book']"));
+            WishListButton = driver.FindElement(By.XPath("//a[contains(@href, 'wishlist')]"));
         }
 
         // AddressBook
         public void ClickAddressBook() => AddressBook.Click();
+        //WishList
+        public void ClickWishList() => WishListButton.Click();
 
         // Business Logic
 
@@ -24,6 +28,12 @@ namespace OpenCartTests.Pages
         {
             ClickAddressBook();
             return new AddressBookPage(driver);
+        }
+
+        public WishListPage GoToWishListPage()
+        {
+            ClickWishList();
+            return new WishListPage(driver);
         }
     }
 }

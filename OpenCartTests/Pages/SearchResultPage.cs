@@ -10,9 +10,15 @@ namespace OpenCartTests.Pages
     public class SearchResultPage : ASearchCriteriaComponent
     {
         public IWebElement ResultPageHeader { get; private set; }
+        public IWebElement ButtonListView { get; private set; }
+        public IWebElement ButtonGridView { get; private set; }
         public SearchResultPage(IWebDriver driver) : base(driver) 
         { 
-            ResultPageHeader = driver.FindElement(By.XPath("//*[@id='content']/h1")); 
+            ResultPageHeader = driver.FindElement(By.XPath("//*[@id='content']/h1"));
+            ButtonListView = driver.FindElement(By.Id("list-view"));
+            ButtonGridView = driver.FindElement(By.Id("grid-view"));
         }
-    }
+        public void ClickButtonListView() => ButtonListView.Click();
+        public void ClickButtonGridView() => ButtonGridView.Click();
+    } 
 }
