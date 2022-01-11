@@ -11,11 +11,19 @@ namespace OpenCartTests.Pages
     {
         public IWebElement AddressBook { get; private set; }
         public IWebElement WishListButton { get; private set; }
+        
+        public IWebElement EditAccountInformation { get; private set; }
+        
+       
         public ARightMenuComponent(IWebDriver driver) : base(driver)
         {
             AddressBook = driver.FindElement(By.XPath("//*[text()='Address Book']"));
             WishListButton = driver.FindElement(By.XPath("//a[contains(@href, 'wishlist')]"));
         }
+        
+        public string GetEditAccountInformationText() => EditAccountInformation.Text;
+        public void ClickEditAccountInformation() => EditAccountInformation.Click();
+
 
         // AddressBook
         public void ClickAddressBook() => AddressBook.Click();

@@ -151,5 +151,15 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Login");
             return new LoginPage(driver);
         }
+        
+        public MyAccountPage GoToMyAccountPage()
+        {
+            /*if (!LoggedUser)
+            {
+                throw new Exception(LOGIN_ERROR);
+            }*/
+            ClickMyAccountOptionByPartialName("My");
+            return new MyAccountPage(driver);
+        }
     }
 }
