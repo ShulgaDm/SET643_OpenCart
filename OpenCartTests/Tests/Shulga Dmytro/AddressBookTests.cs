@@ -14,8 +14,8 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
     [TestFixture]
     public class AddressBookTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://localhost/opencart3/upload"; }
-        //protected override string OpenCartURL { get => "http://cart"; }
+        
+        protected override string OpenCartURL { get => "http://cart"; }
         [Test]
         public void UnloggedClickAddressBookButton()
         {
