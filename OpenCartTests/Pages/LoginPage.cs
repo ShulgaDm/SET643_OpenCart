@@ -58,7 +58,14 @@ namespace OpenCartTests.Pages
         public MyAccountPage SuccessfullLogin(User user)
         {
             FillLoginForm(user);
+            LoggedUser = true;
             return new MyAccountPage(driver);
+        }
+        
+        public LoginMessagePage UnSuccessfullLogin(User invalidUser)
+        {
+            FillLoginForm(invalidUser);
+            return new LoginMessagePage(driver);
         }
     }
 }
