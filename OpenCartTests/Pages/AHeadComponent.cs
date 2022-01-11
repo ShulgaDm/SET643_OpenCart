@@ -67,12 +67,32 @@ namespace OpenCartTests.Pages
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
         public IWebElement SearchProductButton { get; private set; }
+
+
+        public IList<IWebElement> MenuTop { get; private set; }
+        public IWebElement DesktopCategory { get; private set; }
+        public IWebElement LaptopsAndNotebooksCategory { get; private set; }
+        public IWebElement ComponentsCategory { get; private set; }
+        public IWebElement TabletsCategory { get; private set; }
+        public IWebElement SoftwareCategory { get; private set; }
+        public IWebElement PhonesAndPdasCategory { get; private set; }
+        public IWebElement CamerasCategory { get; private set; }
+        public IWebElement MP3PlayersCategory { get; private set; }
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
             SearchProductField = driver.FindElement(By.Name("search"));
             SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
+            MenuTop = driver.FindElements(By.CssSelector("ul.nav.navbar-nav > li"));
+            DesktopCategory = driver.FindElement(By.LinkText("Desktops"));
+            LaptopsAndNotebooksCategory = driver.FindElement(By.LinkText("Laptops & Notebooks"));
+            ComponentsCategory = driver.FindElement(By.LinkText("Components"));
+            TabletsCategory = driver.FindElement(By.LinkText("Tablets"));
+            SoftwareCategory = driver.FindElement(By.LinkText("Software"));
+            PhonesAndPdasCategory = driver.FindElement(By.LinkText("Phones & PDAs"));
+            CamerasCategory = driver.FindElement(By.LinkText("Cameras"));
+            MP3PlayersCategory = driver.FindElement(By.LinkText("MP3 Players"));
         }
 
         // Atomic Methods
@@ -90,6 +110,22 @@ namespace OpenCartTests.Pages
         }
 
         // SearchProductField
+        private void ClickOnShowAll()
+        {
+            driver.FindElement(By.PartialLinkText("Show All")).Click();
+        }
+        public void ClickCategoryByPartialLinkText(string Category)
+        {
+            ClickSearchProductField();
+            driver.FindElement(By.PartialLinkText(Category)).Click();
+        }
+        public LeftMenuPage ClickShowAllFromCategoryByPartialCategoryName(string Category)
+        {
+            ClickCategoryByPartialLinkText(Category);
+            ClickOnShowAll();
+            return new LeftMenuPage(driver);
+
+        }
 
         public void ClickSearchProductField() => SearchProductField.Click();
         public void SetSearchProductField(string text)
