@@ -178,5 +178,6 @@ namespace OpenCartTests.Pages
             return new AccountLogoutPage(driver);
 
         }
+
     }
 }
