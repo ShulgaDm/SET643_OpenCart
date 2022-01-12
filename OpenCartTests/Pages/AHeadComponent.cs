@@ -157,6 +157,16 @@ namespace OpenCartTests.Pages
             return new LoginPage(driver);
         }
         
+
+        public MyAccountPage GoToMyAccountPage()
+        {
+            if (!LoggedUser)
+            {
+                throw new Exception("LOGIN_ERROR");
+            }
+            ClickMyAccountOptionByPartialName("My");
+            return new MyAccountPage(driver);
+        }
         public AccountLogoutPage Logout()
         {
             if (!LoggedUser)
@@ -166,6 +176,7 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Logout");
             LoggedUser = false;
             return new AccountLogoutPage(driver);
+
         }
 
     }
