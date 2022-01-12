@@ -14,6 +14,7 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
     [TestFixture]
     public class AddressBookTests : TestRunner
     {
+        
         protected override string OpenCartURL { get => "http://cart"; }
         [Test]
         public void UnloggedClickAddressBookButton()
