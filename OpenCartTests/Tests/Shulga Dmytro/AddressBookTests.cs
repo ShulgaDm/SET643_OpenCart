@@ -42,7 +42,7 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
             string actual = new HomePage(driver)
                                     .GoToLoginPage()
                                     .unloggedClickAddressBookButton()
-                                    .GetURLLoginPage();
+                                    .GetURL();
 
             Assert.IsTrue(actual.Contains(expected));
         }
@@ -56,7 +56,7 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
                                     .GoToLoginPage()
                                     .SuccessfullLogin(user)
                                     .GoToAddressBookPage()
-                                    .GetURLAddressBookPage();
+                                    .GetURL();
 
             Assert.IsTrue(actual.Contains(expected));
         }
