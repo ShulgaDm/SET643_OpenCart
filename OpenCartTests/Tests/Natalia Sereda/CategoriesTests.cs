@@ -11,7 +11,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
     [TestFixture]
-    class CategoriesTests
+  class CategoriesTests
     {
         private readonly string URL = "http://localhost";
         private readonly string AdminURL = "http://localhost/admin/";
@@ -21,16 +21,15 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         public void StartChrome()
         {
             driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
         }
 
-        public void CategoryPreTest(string CategoryExpected)
+        public void CategoryIsVisibleTest(string CategoryExpected)
         {
+       
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
-            Thread.Sleep(1000);
             HomePage homePage = new HomePage(driver);
-            Thread.Sleep(1000);
             LeftMenuPage productPage = homePage.ClickShowAllFromCategoryByPartialCategoryName(CategoryExpected);
 
             string actualInLeftMenu = productPage.GetCurrentItemFromLeftMenuText();
@@ -43,14 +42,29 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         public void DesktopCategoryTest()
         {
             string CategoryExpected = "Desktops";
-            CategoryPreTest(CategoryExpected);
+            CategoryIsVisibleTest(CategoryExpected);
         }
         [Test]
         public void ComponentsCategoryTest()
         {
             string CategoryExpected = "Components";
-            CategoryPreTest(CategoryExpected);
+            CategoryIsVisibleTest(CategoryExpected);
         }
+
+        [Test]
+        public void LaptopsAndNotebooksCategoryTest()
+        {
+            string CategoryExpected = "Laptops & Notebooks";
+            CategoryIsVisibleTest(CategoryExpected);
+        }
+        [Test]
+        public void MP3PlayersCategoryTest()
+        {
+            string CategoryExpected = "MP3 Players";
+            CategoryIsVisibleTest(CategoryExpected);
+        }
+
+
         //[Test]
         //public void TabletsCategoryTest()
         //{
