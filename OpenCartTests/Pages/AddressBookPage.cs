@@ -9,10 +9,12 @@ namespace OpenCartTests.Pages
 {
     public class AddressBookPage : ARightMenuComponent
     {
+        public string URL { get; private set; }
         public IWebElement NewAddressButton { get; private set; }
 
         public AddressBookPage(IWebDriver driver) : base(driver)
         {
+            URL = driver.Url;
             NewAddressButton = driver.FindElement(By.CssSelector("a.btn.btn-primary"));
         }
 
@@ -21,9 +23,12 @@ namespace OpenCartTests.Pages
         public string GetNewAddressButtonText() => NewAddressButton.Text;
 
         // Functional
-        public void VerifyAddressBookPage()
+        public string GetURLAddressBookPage() => URL;
+
+        public AddAddressPage GoToAddAddressPage()
         {
-            GetNewAddressButtonText();
+            ClickNewAddressButton();
+            return new AddAddressPage(driver);
         }
     }
 }

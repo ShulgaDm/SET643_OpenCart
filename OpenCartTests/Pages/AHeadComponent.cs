@@ -64,7 +64,7 @@ namespace OpenCartTests.Pages
         protected IWebDriver driver;
         private DropdownOptions dropdownOptions;
 
-        public static bool LoggedUser { get; protected set; } = false;
+        public static bool LoggedUser { get; set; } = false;
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
         public IWebElement SearchProductButton { get; private set; }

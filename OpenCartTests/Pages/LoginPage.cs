@@ -10,11 +10,13 @@ namespace OpenCartTests.Pages
 {
     public class LoginPage : AUnloggedRightMenuComponent
     {
+        public string URL { get; private set; }
         public IWebElement EmailField { get; private set; }
         public IWebElement PasswordField { get; private set; }
         public IWebElement LoginButton { get; private set; }
         public LoginPage(IWebDriver driver) : base(driver)
         {
+            URL = driver.Url;
             EmailField = driver.FindElement(By.Id("input-email"));
             PasswordField = driver.FindElement(By.Id("input-password"));
             LoginButton = driver.FindElement(By.CssSelector("input.btn.btn-primary"));
@@ -37,7 +39,8 @@ namespace OpenCartTests.Pages
         public string GetLoginButtonText() => LoginButton.GetAttribute(TAG_ATTRIBUTE_VALUE);
         // Functional
 
-        public void VerifyLoginPage()
+        public string GetURLLoginPage() => URL;
+        public void VerifyLoginPage() // TO DELETE
         {
             GetLoginButtonText();
         }
