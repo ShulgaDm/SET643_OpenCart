@@ -40,7 +40,6 @@ namespace OpenCartTests.Tests.Cristina_Budzinska
             resultPage.ClickButtonGridView();
             Assert.IsTrue(resultPage.ButtonGridView.GetAttribute(TAG_ATTRIBUTE_CLASS).Contains(OPTION_ACTIVE));  //check if grid view active
         }
-
         [Test]
         public void SortByTest()
         {
