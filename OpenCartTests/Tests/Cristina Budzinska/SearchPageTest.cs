@@ -53,5 +53,17 @@ namespace OpenCartTests.Tests.Cristina_Budzinska
             SelectElement actualResult = new SelectElement(newResultPage.SortBy);
             Assert.AreEqual(expectedResult, actualResult.SelectedOption.Text);
         }
+        [Test]
+        public void ShowTest()
+        {
+            string expectedResult = "100";
+            HomePage homePage = new HomePage(driver);
+
+            SearchResultPage resultPage = (SearchResultPage)homePage.FindProduct("Mac");
+
+            SearchResultPage newResultPage = resultPage.SelectShowType("100");
+            SelectElement actualResult = new SelectElement(newResultPage.Show);
+            Assert.AreEqual(expectedResult, actualResult.SelectedOption.Text);
+        }
     }
 }
