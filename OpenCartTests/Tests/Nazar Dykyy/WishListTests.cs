@@ -30,5 +30,15 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
            
 
         }
+        [Test]
+        public void InaccessibleWishListWithoutLogging()
+        {
+            LoginPage loginPage = new HomePage(driver)
+                                    .GoToLoginPage()
+                                    .unloggedClickWishListButton();
+            
+            Assert.DoesNotThrow(() => loginPage.VerifyLoginPage());
+
+        }
     }
 }
