@@ -7,6 +7,7 @@ using System.Threading;
 using OpenCartTests.Pages;
 
 
+
 namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
@@ -102,14 +103,13 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             Assert.IsTrue(actual.Contains(expected));
 
             adminDashboardPage.ClickAdminCatalog();
-
             adminDashboardPage.ClickCategories();
-
+            adminDashboardPage.ClickRebuild();
 
 
 
         }
-      
+
 
 
 
