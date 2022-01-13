@@ -68,24 +68,45 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //public void TabletsCategoryTest()
         //{
         //    string CategoryExpected = "Tablets";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
 
         //[Test]
         //public void CamerasCategoryTest()
         //{
         //    string CategoryExpected = "Cameras";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
         //[Test]
         //public void SoftwareCategoryTest()
         //{
         //    string CategoryExpected = "Software";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
 
+        [Test]
+        public void AddNewCategoryTest()
+        {
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(AdminURL);
+            LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
+            string UserName = "user";
+            string Password = "bitnami";
+            logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
+            AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
-        [OneTimeTearDown]
+
+
+
+
+
+
+
+        }
+
+
+
+            [OneTimeTearDown]
         public void AfterAllMethods()
         {
             driver.Quit();
