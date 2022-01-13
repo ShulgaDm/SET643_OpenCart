@@ -95,6 +95,11 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
+            adminDashboardPage.ClickAdminCatalog();
+            adminDashboardPage.ClickCategories();
+
+
+
 
 
 
@@ -106,7 +111,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 
 
 
-            [OneTimeTearDown]
+        [OneTimeTearDown]
         public void AfterAllMethods()
         {
             driver.Quit();
