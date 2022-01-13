@@ -35,6 +35,7 @@ namespace OpenCartTests.Pages
         // LoginButton
         public void ClickLoginButton() => LoginButton.Click();
         public string GetLoginButtonText() => LoginButton.GetAttribute(TAG_ATTRIBUTE_VALUE);
+
         // Functional
 
         public void VerifyLoginPage() // TO DELETE
@@ -43,7 +44,6 @@ namespace OpenCartTests.Pages
         }
 
         // Business Logic
-
         private void FillLoginForm(User user)
         {
             ClickEmailField();

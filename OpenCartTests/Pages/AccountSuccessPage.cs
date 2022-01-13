@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OpenCartTests.Pages
 {
-    class AccountSuccessPage : ARightMenuComponent
+   public class AccountSuccessPage : ARightMenuComponent
     {
         public IWebElement MessageText { get; private set; }
         public IWebElement ContinueButton { get; private set; }
