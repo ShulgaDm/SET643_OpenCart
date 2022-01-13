@@ -20,11 +20,6 @@ namespace OpenCartTests.Pages
         }
         public void ClickMyAdminAccountButton() => MyAdminAccountButton.Click();
 
-        //public AddCategoryGeneral ClickAddNewCategoryButton()
-        //{
-        //    AddNewCategoryButton.Click();
-        //    return new AddCategoryGeneral(driver);
-        //}
 
     }
 }

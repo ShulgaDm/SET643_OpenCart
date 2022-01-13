@@ -6,6 +6,7 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenCartTests.Pages;
 
+
 namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
@@ -20,12 +21,12 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         public void StartChrome()
         {
             driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public void CategoryIsVisibleTest(string CategoryExpected)
         {
-       
+         
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
             HomePage homePage = new HomePage(driver);
@@ -85,8 +86,9 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //}
 
         [Test]
-        public void AddNewCategoryTest()
+        public void LoginAsAdminTest()
         {
+           
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(AdminURL);
             LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
@@ -95,19 +97,21 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
+            string expected = AdminURL;
+            string actual = "http://localhost/admin/";
+            Assert.IsTrue(actual.Contains(expected));
+
             adminDashboardPage.ClickAdminCatalog();
+
             adminDashboardPage.ClickCategories();
 
 
 
 
-
-
-
-
-
-
         }
+      
+
+
 
 
 
