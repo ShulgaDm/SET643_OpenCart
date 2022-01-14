@@ -90,7 +90,6 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         [Test]
         public void CategoryRebuildTest()
         {
-           
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(AdminURL);
             LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
