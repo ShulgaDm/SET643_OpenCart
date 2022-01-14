@@ -88,7 +88,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //}
 
         [Test]
-        public void LoginAsAdminTest()
+        public void CategoryRebuildTest()
         {
            
             driver.Manage().Window.Maximize();
