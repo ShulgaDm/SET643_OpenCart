@@ -64,7 +64,8 @@ namespace OpenCartTests.Pages
         protected IWebDriver driver;
         private DropdownOptions dropdownOptions;
 
-        public static bool LoggedUser { get; protected set; } = false;
+        public static bool LoggedUser { get; set; } = false;
+        public string URL { get; private set; }
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
         public IWebElement SearchProductButton { get; private set; }
@@ -82,6 +83,7 @@ namespace OpenCartTests.Pages
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
+            URL = driver.Url;
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
             SearchProductField = driver.FindElement(By.Name("search"));
             SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
@@ -145,6 +147,9 @@ namespace OpenCartTests.Pages
             dropdownOptions = new DropdownOptions(driver, searchLocator);
         }
 
+        // URL
+        public string GetURL() => URL;
+
         // Business Logic
 
         public LoginPage GoToLoginPage()
@@ -157,6 +162,16 @@ namespace OpenCartTests.Pages
             return new LoginPage(driver);
         }
         
+
+        public MyAccountPage GoToMyAccountPage()
+        {
+            if (!LoggedUser)
+            {
+                throw new Exception("LOGIN_ERROR");
+            }
+            ClickMyAccountOptionByPartialName("My");
+            return new MyAccountPage(driver);
+        }
         public AccountLogoutPage Logout()
         {
             if (!LoggedUser)
@@ -166,6 +181,8 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Logout");
             LoggedUser = false;
             return new AccountLogoutPage(driver);
+
         }
+
     }
 }

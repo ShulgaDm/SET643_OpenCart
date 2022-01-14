@@ -9,9 +9,12 @@ namespace OpenCartTests.Pages
 {
     public class MyAccountPage : ARightMenuComponent
     {   // TODO
+        public IWebElement ChangeYourPassword { get; private set; }
         public MyAccountPage(IWebDriver driver) : base(driver)
         {
-
+         ChangeYourPassword = driver.FindElement(By.PartialLinkText("password"));
         }
+        public string GetChangeYourPasswordText() => ChangeYourPassword.Text;
+        public void ClickhangeYourPassword() => ChangeYourPassword.Click();
     }
 }

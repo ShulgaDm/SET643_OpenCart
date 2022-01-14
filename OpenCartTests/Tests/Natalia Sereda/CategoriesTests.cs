@@ -11,7 +11,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
     [TestFixture]
-  class CategoriesTests
+    class CategoriesTests
     {
         private readonly string URL = "http://localhost";
         private readonly string AdminURL = "http://localhost/admin/";
@@ -28,7 +28,6 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 
         public void CategoryIsVisibleTest(string CategoryExpected)
         {
-         
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
             HomePage homePage = new HomePage(driver);
@@ -40,17 +39,20 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             Console.WriteLine("Expected: " + CategoryExpected + " Actual in Left: " + actualInLeftMenu + " Actual in Content: " + actualInContent);
             Assert.AreEqual(CategoryExpected, actualInContent);
         }
+      
         [Test]
         public void DesktopCategoryTest()
         {
             string CategoryExpected = "Desktops";
             CategoryIsVisibleTest(CategoryExpected);
         }
+      
         [Test]
         public void ComponentsCategoryTest()
         {
             string CategoryExpected = "Components";
             CategoryIsVisibleTest(CategoryExpected);
+
         }
 
         [Test]
@@ -65,7 +67,6 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             string CategoryExpected = "MP3 Players";
             CategoryIsVisibleTest(CategoryExpected);
         }
-
 
         //[Test]
         //public void TabletsCategoryTest()
@@ -88,9 +89,9 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //}
 
         [Test]
-        public void LoginAsAdminTest()
+        public void AddNewCategoryTest()
         {
-           
+
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(AdminURL);
             LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
@@ -99,13 +100,13 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
+
             string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;
             adminDashboardPage.ClickAdminCatalog();
             Thread.Sleep(2000);//Only for presentation
             string actual = adminDashboardPage.OpenCategory().Rebuild().GetAlertMessageText();
             Assert.IsTrue(actual.Contains(exepcted));
         }
-
 
         [OneTimeTearDown]
         public void AfterAllMethods()

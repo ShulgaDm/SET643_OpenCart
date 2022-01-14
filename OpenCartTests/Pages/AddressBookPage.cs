@@ -21,9 +21,11 @@ namespace OpenCartTests.Pages
         public string GetNewAddressButtonText() => NewAddressButton.Text;
 
         // Functional
-        public void VerifyAddressBookPage()
+
+        public AddAddressPage GoToAddAddressPage()
         {
-            GetNewAddressButtonText();
+            ClickNewAddressButton();
+            return new AddAddressPage(driver);
         }
     }
 }

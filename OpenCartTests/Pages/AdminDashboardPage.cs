@@ -13,7 +13,5 @@ namespace OpenCartTests.Pages
         {
 
         }
-
-  
     }
 }
