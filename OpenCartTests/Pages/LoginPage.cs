@@ -37,7 +37,7 @@ namespace OpenCartTests.Pages
         public string GetLoginButtonText() => LoginButton.GetAttribute(TAG_ATTRIBUTE_VALUE);
         // Functional
 
-        public void VerifyLoginPage()
+        public void VerifyLoginPage() // TO DELETE
         {
             GetLoginButtonText();
         }

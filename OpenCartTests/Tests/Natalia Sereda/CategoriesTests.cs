@@ -40,17 +40,20 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             Console.WriteLine("Expected: " + CategoryExpected + " Actual in Left: " + actualInLeftMenu + " Actual in Content: " + actualInContent);
             Assert.AreEqual(CategoryExpected, actualInContent);
         }
+      
         [Test]
         public void DesktopCategoryTest()
         {
             string CategoryExpected = "Desktops";
             CategoryIsVisibleTest(CategoryExpected);
         }
+      
         [Test]
         public void ComponentsCategoryTest()
         {
             string CategoryExpected = "Components";
             CategoryIsVisibleTest(CategoryExpected);
+
         }
 
         [Test]
@@ -65,7 +68,6 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             string CategoryExpected = "MP3 Players";
             CategoryIsVisibleTest(CategoryExpected);
         }
-
 
         //[Test]
         //public void TabletsCategoryTest()
@@ -97,7 +99,6 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             string Password = "bitnami";
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
-
             string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;
             adminDashboardPage.ClickAdminCatalog();
             Thread.Sleep(2000);//Only for presentation
