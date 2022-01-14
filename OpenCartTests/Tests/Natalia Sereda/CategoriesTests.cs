@@ -98,13 +98,14 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
-            string expected = AdminURL;
-            string actual = "http://localhost/admin/";
-            Assert.IsTrue(actual.Contains(expected));
-
+        
+            string exepcted = 
             adminDashboardPage.ClickAdminCatalog();
-            adminDashboardPage.ClickCategories();
-            adminDashboardPage.ClickRebuild();
+            Thread.Sleep(2000);//Only for presentation
+            string actual = adminDashboardPage.OpenCategory().Rebuild().GetAlertMessageText();
+
+     
+         
 
 
 
@@ -115,10 +116,10 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 
 
 
-        [OneTimeTearDown]
-        public void AfterAllMethods()
-        {
-            driver.Quit();
-        }
+        //[OneTimeTearDown]
+        //public void AfterAllMethods()
+        //{
+        //    driver.Quit();
+        //}
     }
 }
