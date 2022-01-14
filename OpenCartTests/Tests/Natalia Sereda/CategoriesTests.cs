@@ -7,7 +7,6 @@ using System.Threading;
 using OpenCartTests.Pages;
 
 
-
 namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
@@ -16,6 +15,8 @@ namespace OpenCartTests.Tests.Sereda_Natalia
     {
         private readonly string URL = "http://localhost";
         private readonly string AdminURL = "http://localhost/admin/";
+        public readonly string EXPECTED_SUCCESSFULL_REBUILD_MESSAGE =
+                                        "Success: You have modified categories!";
         private IWebDriver driver;
 
         [OneTimeSetUp]
@@ -98,28 +99,18 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
 
-        
-            string exepcted = 
+            string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;
             adminDashboardPage.ClickAdminCatalog();
             Thread.Sleep(2000);//Only for presentation
             string actual = adminDashboardPage.OpenCategory().Rebuild().GetAlertMessageText();
-
-     
-         
-
-
-
+            Assert.IsTrue(actual.Contains(exepcted));
         }
 
 
-
-
-
-
-        //[OneTimeTearDown]
-        //public void AfterAllMethods()
-        //{
-        //    driver.Quit();
-        //}
+        [OneTimeTearDown]
+        public void AfterAllMethods()
+        {
+            driver.Quit();
+        }
     }
 }
