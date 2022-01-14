@@ -11,7 +11,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
     [TestFixture]
-    class CategoriesTests
+  class CategoriesTests
     {
         private readonly string URL = "http://localhost";
         private readonly string AdminURL = "http://localhost/admin/";
@@ -28,6 +28,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 
         public void CategoryIsVisibleTest(string CategoryExpected)
         {
+         
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
             HomePage homePage = new HomePage(driver);
@@ -89,9 +90,8 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //}
 
         [Test]
-        public void AddNewCategoryTest()
+        public void CategoryRebuildTest()
         {
-
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(AdminURL);
             LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
@@ -99,14 +99,13 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             string Password = "bitnami";
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
-
-
             string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;
             adminDashboardPage.ClickAdminCatalog();
             Thread.Sleep(2000);//Only for presentation
             string actual = adminDashboardPage.OpenCategory().Rebuild().GetAlertMessageText();
             Assert.IsTrue(actual.Contains(exepcted));
         }
+
 
         [OneTimeTearDown]
         public void AfterAllMethods()

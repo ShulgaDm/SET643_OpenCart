@@ -8,8 +8,8 @@ namespace OpenCartTests.Pages
 {
     public abstract class AAdminNavigationComponent
     {
+
         private readonly string OPTION_NOT_FOUND_MESSAGE = "Cannot foud the option";
-        
         protected IWebDriver driver;
         public IWebElement AdminDashBoard { get; private set; }
         public IWebElement AdminCatalog { get; private set; }
@@ -23,6 +23,7 @@ namespace OpenCartTests.Pages
             Categories = driver.FindElement(By.XPath("//*[@id='collapse1']/li[1]"));
         }
       
+
         public void ClickOnAdminDashBoard() => AdminDashBoard.Click();
         public void ClickAdminCatalog() => AdminCatalog.Click();
         public void ClickCategories() => Categories.Click();
