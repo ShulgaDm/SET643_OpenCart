@@ -16,8 +16,6 @@ namespace OpenCartTests.Pages
         }
 
         public string GetVerifyWishListText() => VerifyWishList.Text;
-        /*public void ClickNewWishListButton() => NewWishList.Click();
-        public string GetNewWishListButtonText() => NewWishList.Text;*/
 
         public void VerifyWishListPage()
         {

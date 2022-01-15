@@ -172,7 +172,11 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Login");
             return new LoginPage(driver);
         }
-        
+        public RegisterPage GoToRegisterPage()
+        {      
+            ClickMyAccountOptionByPartialName("Register");
+            return new RegisterPage(driver);
+        }
 
         public MyAccountPage GoToMyAccountPage()
         {

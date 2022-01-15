@@ -14,13 +14,12 @@ namespace OpenCartTests.Pages
         public IWebElement LoginPageButton { get; private set; }       
        
         public IWebElement WishListButton { get; private set; }
-
+        
         public AUnloggedRightMenuComponent(IWebDriver driver) : base(driver)
         {
             AddressBookButton = driver.FindElement(By.XPath("//a[contains(@href, 'address')]"));
             WishListButton = driver.FindElement(By.XPath("//a[contains(@href, 'wishlist')]"));
             LoginPageButton = driver.FindElement(By.XPath("//a[contains(@href, 'login')]"));
-
         }
 
         // Atomic Methods

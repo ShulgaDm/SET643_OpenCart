@@ -10,8 +10,7 @@ namespace OpenCartTests.Pages
     public abstract class ARightMenuComponent : AStatusBarComponent
     {
         public IWebElement AddressBook { get; private set; }
-        public IWebElement WishListButton { get; private set; }
-        
+        public IWebElement WishListButton { get; private set; }       
         public IWebElement EditAccountInformation { get; private set; }
         
        
