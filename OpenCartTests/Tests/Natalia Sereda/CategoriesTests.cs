@@ -6,6 +6,7 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenCartTests.Pages;
 
+
 namespace OpenCartTests.Tests.Sereda_Natalia
 {
 
@@ -14,18 +15,20 @@ namespace OpenCartTests.Tests.Sereda_Natalia
     {
         private readonly string URL = "http://localhost";
         private readonly string AdminURL = "http://localhost/admin/";
+        public readonly string EXPECTED_SUCCESSFULL_REBUILD_MESSAGE =
+                                        "Success: You have modified categories!";
         private IWebDriver driver;
 
         [OneTimeSetUp]
         public void StartChrome()
         {
             driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public void CategoryIsVisibleTest(string CategoryExpected)
         {
-       
+         
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
             HomePage homePage = new HomePage(driver);
@@ -37,17 +40,20 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             Console.WriteLine("Expected: " + CategoryExpected + " Actual in Left: " + actualInLeftMenu + " Actual in Content: " + actualInContent);
             Assert.AreEqual(CategoryExpected, actualInContent);
         }
+      
         [Test]
         public void DesktopCategoryTest()
         {
             string CategoryExpected = "Desktops";
             CategoryIsVisibleTest(CategoryExpected);
         }
+      
         [Test]
         public void ComponentsCategoryTest()
         {
             string CategoryExpected = "Components";
             CategoryIsVisibleTest(CategoryExpected);
+
         }
 
         [Test]
@@ -63,26 +69,42 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             CategoryIsVisibleTest(CategoryExpected);
         }
 
-
         //[Test]
         //public void TabletsCategoryTest()
         //{
         //    string CategoryExpected = "Tablets";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
 
         //[Test]
         //public void CamerasCategoryTest()
         //{
         //    string CategoryExpected = "Cameras";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
         //[Test]
         //public void SoftwareCategoryTest()
         //{
         //    string CategoryExpected = "Software";
-        //    CategoryPreTest(CategoryExpected);
+        //    CategoryIsVisibleTest(CategoryExpected);
         //}
+
+        [Test]
+        public void CategoryRebuildTest()
+        {
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(AdminURL);
+            LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
+            string UserName = "user";
+            string Password = "bitnami";
+            logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
+            AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
+            string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;
+            adminDashboardPage.ClickAdminCatalog();
+            Thread.Sleep(2000);//Only for presentation
+            string actual = adminDashboardPage.OpenCategory().Rebuild().GetAlertMessageText();
+            Assert.IsTrue(actual.Contains(exepcted));
+        }
 
 
         [OneTimeTearDown]

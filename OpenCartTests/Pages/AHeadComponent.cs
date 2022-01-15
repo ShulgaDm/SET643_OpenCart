@@ -64,9 +64,14 @@ namespace OpenCartTests.Pages
         protected IWebDriver driver;
         private DropdownOptions dropdownOptions;
 
+
         public static bool LoggedUser { get; protected set; } = false;
         public IWebElement Currency { get; private set; }
+
+        public string URL { get; private set; }
+
         public IWebElement MyAccount { get; private set; }
+        public IWebElement ShoppingCartButton { get; private set; }
         public IWebElement SearchProductField { get; private set; }
         public IWebElement SearchProductButton { get; private set; }
 
@@ -83,8 +88,11 @@ namespace OpenCartTests.Pages
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
+
             Currency = driver.FindElement(By.CssSelector(".btn.btn-link.dropdown-toggle"));
+            URL = driver.Url;
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
+            ShoppingCartButton = driver.FindElement(By.CssSelector("a[title='Shopping Cart']"));
             SearchProductField = driver.FindElement(By.Name("search"));
             SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
             MenuTop = driver.FindElements(By.CssSelector("ul.nav.navbar-nav > li"));
@@ -122,6 +130,10 @@ namespace OpenCartTests.Pages
             dropdownOptions = null;
         }
 
+        // ShoppingCart
+
+        private void ClickShoppingCart() => ShoppingCartButton.Click();
+
         // SearchProductField
         private void ClickOnShowAll()
         {
@@ -157,7 +169,15 @@ namespace OpenCartTests.Pages
             dropdownOptions = new DropdownOptions(driver, searchLocator);
         }
 
+        // URL
+        public string GetURL() => URL;
+
         // Business Logic
+        public ShoppingCartPage GoToShoppingCartPage()
+        {
+            ClickShoppingCart();
+            return new ShoppingCartPage(driver);
+        }
 
         public LoginPage GoToLoginPage()
         {
@@ -168,7 +188,11 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Login");
             return new LoginPage(driver);
         }
-        
+        public RegisterPage GoToRegisterPage()
+        {      
+            ClickMyAccountOptionByPartialName("Register");
+            return new RegisterPage(driver);
+        }
 
         public MyAccountPage GoToMyAccountPage()
         {

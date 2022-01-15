@@ -13,12 +13,29 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 {
     public class WishListTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://localhost/index.php?route=account/register"; }
+        protected override string OpenCartURL { get => "http://localhost"; }
+        public readonly string Wishlist_URL = "index.php?route=account/wishlist";
+        public readonly string LOGIN_URL = "index.php?route=account/login";
+        
+        User user;
+
+        [OneTimeSetUp]
+        public void BeforeAllMethods()
+        {
+          user = User.CreateBuilder()
+              .SetFirstName("Nazar")
+              .SetLastName("Dykyy")
+              .SetEMail("n.dykyy@gmail.com")
+              .SetTelephone("0980201806")
+              .SetPassword("qwerty")
+              .Build();
+
+        }
         [Test]
         public void EmptyWishListAfterFirstLogin()
         {
-            RegisterPage registerPage = new RegisterPage(driver);
-            User user = User.CreateBuilder().SetFirstName("Nazar").SetLastName("Dykyy").SetEMail("n.dykyy@gmail.com").SetTelephone("0980201806").SetPassword("qwerty").Build();
+            string expected = Wishlist_URL;
+            RegisterPage registerPage = new HomePage(driver).GoToRegisterPage();
 
             registerPage.FillRegisterForm(user);
             registerPage.ClickAgreeCheckBox();
@@ -26,18 +43,21 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
 
-            WishListPage wishlistpage = new WishListPage(driver).GoToWishListPage();
-           
+            string actual = new WishListPage(driver).GoToWishListPage()
+                                                    .GetURL();
+            Assert.IsTrue(actual.Contains(expected));
 
         }
         [Test]
         public void InaccessibleWishListWithoutLogging()
         {
-            LoginPage loginPage = new HomePage(driver)
+            string expected = LOGIN_URL;
+            string actual = new HomePage(driver)
                                     .GoToLoginPage()
-                                    .unloggedClickWishListButton();
-            
-            Assert.DoesNotThrow(() => loginPage.VerifyLoginPage());
+                                    .unloggedClickWishListButton()
+                                    .GetURL();
+
+            Assert.IsTrue(actual.Contains(expected));
 
         }
     }

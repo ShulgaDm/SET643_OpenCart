@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OpenCartTests.Pages
 {
-    class RegisterMessagePage : RegisterPage
+    public class RegisterMessagePage : RegisterPage
     {
         public readonly string EXPECTED_WARNING_AGREE = "Warning: You must agree to the Privacy Policy!";
         public readonly string EXPECTED_WARNING_EMAIL = "Warning: E-Mail Address is already registered!";

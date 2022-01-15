@@ -28,6 +28,7 @@ namespace OpenCartTests.Tools
         [TearDown]
         public void AfterEachMethod()
         {
+            AHeadComponent.LoggedUser = false;
             driver.Quit();
         }
 

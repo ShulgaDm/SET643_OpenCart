@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OpenCartTests.Pages
 {
-    class RegisterPage : AUnloggedRightMenuComponent
+    public class RegisterPage : AUnloggedRightMenuComponent
     {
         public IWebElement FirstNameField { get; private set; }
         public IWebElement LastNameField { get; private set; }
@@ -19,7 +19,7 @@ namespace OpenCartTests.Pages
         public IWebElement ContinueButton { get; private set; }
         public RegisterPage(IWebDriver driver) : base(driver)
         {
-            InitialRegisterPage();
+            InitialRegisterPage();        
         }
 
         public void InitialRegisterPage()

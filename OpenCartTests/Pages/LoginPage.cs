@@ -35,15 +35,15 @@ namespace OpenCartTests.Pages
         // LoginButton
         public void ClickLoginButton() => LoginButton.Click();
         public string GetLoginButtonText() => LoginButton.GetAttribute(TAG_ATTRIBUTE_VALUE);
+
         // Functional
 
-        public void VerifyLoginPage()
+        public void VerifyLoginPage() // TO DELETE
         {
             GetLoginButtonText();
         }
 
         // Business Logic
-
         private void FillLoginForm(User user)
         {
             ClickEmailField();

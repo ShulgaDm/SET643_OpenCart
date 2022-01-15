@@ -1,15 +1,24 @@
 ﻿using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenCartTests.Pages
 {
     public class HomePage : AHeadComponent
     {
-        public HomePage(IWebDriver driver) : base(driver) { }
+        public IList<IWebElement> Products { get; private set; }
+        public HomePage(IWebDriver driver) : base(driver) 
+        {
+            Products = driver.FindElements(By.CssSelector(".product-layout"));
+        }
+
+        public void ClickOnFirstProduct() => Products[0].Click();
+
+        public ProductDetailsPage GetFirstProductDetails()
+        {
+            ClickOnFirstProduct();
+            return new ProductDetailsPage(driver);
+        }
+
         public ASearchCriteriaComponent FindProduct(string searchText)
         {
             ClearSearchProductField();

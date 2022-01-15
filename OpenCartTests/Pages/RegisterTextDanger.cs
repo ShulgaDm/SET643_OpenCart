@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OpenCartTests.Pages
 {
-    class RegisterTextDanger : RegisterPage
+   public class RegisterTextDanger : RegisterPage
     {
         public readonly string EXPECTED_VALID_FIRSTNAME_MESSAGE = "First Name must be between 1 and 32 characters!";
         public readonly string EXPECTED_VALID_LASTNAME_MESSAGE = "Last Name must be between 1 and 32 characters!";
