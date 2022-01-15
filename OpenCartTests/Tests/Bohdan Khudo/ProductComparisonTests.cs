@@ -19,7 +19,7 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
         protected override string OpenCartURL { get => "http://localhost/opencart3/upload"; }
         private const string EXPECTED_CATEGORY = "Phones & PDAs";
         private const int EXPECTED_COUNT_OF_PRODUCTS = 3;
-        private readonly double[] EXPECTED_PRISES = new double[] {122, 123.2, 337.99};
+        private readonly double[] EXPECTED_PRICES = new double[] {122, 123.2, 337.99};
         
         
         [Test]
@@ -65,7 +65,7 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
 
             ProductComparison productComparison = new ProductComparison(driver);
             
-            Assert.AreEqual(EXPECTED_PRISES, productComparison.Prices);
+            Assert.AreEqual(EXPECTED_PRICES, productComparison.Prices);
 
         }
 
