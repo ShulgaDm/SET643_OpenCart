@@ -65,6 +65,7 @@ namespace OpenCartTests.Pages
         private DropdownOptions dropdownOptions;
 
         public static bool LoggedUser { get; protected set; } = false;
+        public IWebElement Currency { get; private set; }
         public IWebElement MyAccount { get; private set; }
         public IWebElement SearchProductField { get; private set; }
         public IWebElement SearchProductButton { get; private set; }
@@ -82,6 +83,7 @@ namespace OpenCartTests.Pages
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
+            Currency = driver.FindElement(By.CssSelector(".btn.btn-link.dropdown-toggle"));
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
             SearchProductField = driver.FindElement(By.Name("search"));
             SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
@@ -97,6 +99,16 @@ namespace OpenCartTests.Pages
         }
 
         // Atomic Methods
+        public char GetCurrencyText() => Convert.ToChar(Currency.Text.Substring(0, 1));
+       
+        public void ClickDesktopCategory() => DesktopCategory.Click();
+        public void ClickLaptopsAndNotebooksCategory() => LaptopsAndNotebooksCategory.Click();
+        public void ClickComponentsCategory() => ComponentsCategory.Click();
+        public void ClickTabletsCategory() => TabletsCategory.Click();
+        public void ClickSoftwareCategory() => SoftwareCategory.Click();
+        public void ClickPhonesAndPdasCategory() => PhonesAndPdasCategory.Click();
+        public void ClickCamerasCategory() => CamerasCategory.Click();
+        public void ClickMP3PlayersCategory() => MP3PlayersCategory.Click();
 
         // MyAccount
 

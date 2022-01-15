@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <Compile Remove="Tests\Bohdan Khudo\exampleTest.cs" />
+    <Compile Remove="Data\ProductComponent.cs" />
+    <Compile Remove="Data\ProductListComponent.cs" />
   </ItemGroup>
 
 </Project>

@@ -1,18 +1,18 @@
-﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenQA.Selenium;
+using System.Collections.Generic;
+using NUnit.Framework;
 
-namespace OpenCartTests.Pages
+namespace OpenCartTests.Data
 {
-    public class ProductsListComponent
-    { 
+
+    public class ProductListComponent
+    {
         private IWebDriver _driver;
         private List<ProductComponent> _productComponents;
 
-        public ProductsListComponent(IWebDriver driver)
+        public ProductListComponent(IWebDriver driver)
         {
             _driver = driver;
             initProductsListComponents();
@@ -29,5 +29,6 @@ namespace OpenCartTests.Pages
 
         public IEnumerable<string> GetProductsNameList()
             => _productComponents.Select(x => x.GetNameText()); 
+
     }
 }

@@ -1,14 +1,10 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenQA.Selenium;
 
-namespace OpenCartTests.Pages
+namespace OpenCartTests.Data
 {
+
     public class ProductComponent
-    {   
+    {
         private IWebElement _productLayout;
         private IWebElement _name;
         private IWebElement _price;
