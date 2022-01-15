@@ -65,9 +65,9 @@ namespace OpenCartTests.Pages
         private DropdownOptions dropdownOptions;
 
 
-        public static bool LoggedUser { get; protected set; } = false;
         public IWebElement Currency { get; private set; }
 
+        public static bool LoggedUser { get; set; } = false;
         public string URL { get; private set; }
 
         public IWebElement MyAccount { get; private set; }
