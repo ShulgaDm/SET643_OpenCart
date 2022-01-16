@@ -15,6 +15,7 @@ namespace OpenCartTests.Pages
         public IWebElement YourReviewField { get; private set; }
         public IList<IWebElement> RatingValues { get; private set; }
         public IWebElement ContinueButton { get; private set; }
+        public IWebElement Price { get; private set; }
 
         public ProductDetailsPage(IWebDriver driver) : base(driver)
         {
@@ -24,6 +25,7 @@ namespace OpenCartTests.Pages
             YourReviewField = driver.FindElement(By.Id("input-review"));
             RatingValues = driver.FindElements(By.XPath("//input[contains(@type, 'radio')]"));
             ContinueButton = driver.FindElement(By.Id("button-review"));
+            Price = driver.FindElement(By.CssSelector(".list-unstyled h2"));
         }
 
         public void ClickReviewTab() => ReviewTab.Click();
@@ -42,6 +44,8 @@ namespace OpenCartTests.Pages
 
         // ContinueButton
         public void ClickContinueButton() => ContinueButton.Click();
+        public string GetPriceText() => Price.Text;
+        //public ProductDetailsPage 
 
         // RatingValues
         public IWebElement GetRatingByValue(string value)

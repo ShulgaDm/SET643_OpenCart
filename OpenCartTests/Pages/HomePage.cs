@@ -19,6 +19,12 @@ namespace OpenCartTests.Pages
             return new ProductDetailsPage(driver);
         }
 
+        public HomePage GetFirstProductInfo()
+        {
+            ClickOnFirstProduct();
+            return new HomePage(driver);
+        }
+
         public ASearchCriteriaComponent FindProduct(string searchText)
         {
             ClearSearchProductField();
