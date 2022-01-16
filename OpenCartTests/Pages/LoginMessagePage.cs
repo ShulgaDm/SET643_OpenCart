@@ -9,10 +9,11 @@ namespace OpenCartTests.Pages
 {
     public class LoginMessagePage : LoginPage
     {
-        // TODO
+        private IWebElement AlertMessage;
         public LoginMessagePage(IWebDriver driver) : base(driver)
         {
-
+            AlertMessage = driver.FindElement(By.CssSelector(".alert.alert-danger"));
         }
+        public string GetAlertMessageText() => AlertMessage.Text;
     }
 }
