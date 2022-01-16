@@ -13,17 +13,15 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
     [TestFixture]
     public class ShoppingCartTests : TestRunner
     {
-        //private emtyCartText = By.XPath("//*[@id='content']/p");
         //protected override string OpenCartURL { get => "http://localhost/index.php?route=checkout/cart"; }
+        private readonly string EMPTY_SHOPPING_CART_TEXT = "Your shopping cart is empty!";
         protected override string OpenCartURL { get => "http://localhost"; }
         [Test]
         public void EmptyShoppingCartWithoutLogging()
         {
             ShoppingCartPage shoppingCartPage = new HomePage(driver).GoToShoppingCartPage();
             string actualResult = shoppingCartPage.GetEmptyShoppingCartText();
-            string expectedResult = "Your shopping cart is empty!";
-            Assert.AreEqual(expectedResult, actualResult);
-
+            Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
         }
 
     }
