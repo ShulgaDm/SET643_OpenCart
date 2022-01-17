@@ -28,6 +28,8 @@ namespace OpenCartTests.Pages
             _addToCompareButton = _productLayout.FindElement(By.CssSelector(".fa.fa-exchange"));
         }
 
+        
+
         public IWebElement ProductLayout => _productLayout;
         public IWebElement Name => _name;
         public IWebElement Price => _price;

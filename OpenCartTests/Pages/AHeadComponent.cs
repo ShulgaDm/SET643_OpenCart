@@ -84,7 +84,9 @@ namespace OpenCartTests.Pages
         public IWebElement SoftwareCategory { get; private set; }
         public IWebElement PhonesAndPdasCategory { get; private set; }
         public IWebElement CamerasCategory { get; private set; }
-        public IWebElement MP3PlayersCategory { get; private set; }
+        public IWebElement MP3PlayersCategory { get; private set; }     
+        public IWebElement HomePageButton { get; private set; }
+        public IWebElement WishlistButton { get; private set; }
         protected AHeadComponent(IWebDriver driver)
         {
             this.driver = driver;
@@ -104,6 +106,8 @@ namespace OpenCartTests.Pages
             PhonesAndPdasCategory = driver.FindElement(By.LinkText("Phones & PDAs"));
             CamerasCategory = driver.FindElement(By.LinkText("Cameras"));
             MP3PlayersCategory = driver.FindElement(By.LinkText("MP3 Players"));
+            HomePageButton = driver.FindElement(By.Id("logo"));
+            WishlistButton = driver.FindElement(By.XPath("//i[@class='fa fa-heart']"));
         }
 
         // Atomic Methods
@@ -117,6 +121,7 @@ namespace OpenCartTests.Pages
         public void ClickPhonesAndPdasCategory() => PhonesAndPdasCategory.Click();
         public void ClickCamerasCategory() => CamerasCategory.Click();
         public void ClickMP3PlayersCategory() => MP3PlayersCategory.Click();
+        public void ClickWishListButton() => WishlistButton.Click();
 
         // MyAccount
 
@@ -152,6 +157,8 @@ namespace OpenCartTests.Pages
 
         }
 
+        public void ClickHomePageButton() => HomePageButton.Click();
+        
         public void ClickSearchProductField() => SearchProductField.Click();
         public void SetSearchProductField(string text)
         {
@@ -203,7 +210,16 @@ namespace OpenCartTests.Pages
             ClickMyAccountOptionByPartialName("Register");
             return new RegisterPage(driver);
         }
-
+        public HomePage GoToHomePage()
+        {
+            ClickHomePageButton();
+            return new HomePage(driver);
+        }
+        public WishListPage GoToWishPage()
+        {
+            ClickWishListButton();
+            return new WishListPage(driver);
+        }
         public MyAccountPage GoToMyAccountPage()
         {
             if (!LoggedUser)

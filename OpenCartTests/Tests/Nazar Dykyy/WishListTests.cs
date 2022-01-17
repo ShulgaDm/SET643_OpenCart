@@ -18,6 +18,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
         public readonly string LOGIN_URL = "index.php?route=account/login";
         
         User user;
+        User user1;
 
         [OneTimeSetUp]
         public void BeforeAllMethods()
@@ -29,6 +30,13 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
               .SetTelephone("0980201806")
               .SetPassword("qwerty")
               .Build();
+            user1 = User.CreateBuilder()
+             .SetFirstName("Ihor")
+             .SetLastName("Dykyy")
+             .SetEMail("addproduct@towishlict.com")
+             .SetTelephone("0980201807")
+             .SetPassword("qwerty")
+             .Build();
 
         }
         [Test]
@@ -43,7 +51,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
 
-            string actual = new WishListPage(driver).GoToWishListPage()
+            string actual = new WishListPage(driver).GoToWishPage()//
                                                     .GetURL();
             Assert.IsTrue(actual.Contains(expected));
 
@@ -57,6 +65,22 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
                                     .unloggedClickWishListButton()
                                     .GetURL();
 
+            Assert.IsTrue(actual.Contains(expected));
+
+        }
+        [Test]
+        public void AddProductToWishList()
+        {
+            string expected = Wishlist_URL;
+            string homepage = new HomePage(driver)
+                                    .GoToLoginPage()
+                                    .SuccessfullLogin(user1)
+                                    .GoToHomePage()
+                                    .GetFirstProductInfo()                                    
+                                    .GetURL();
+            ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
+            string actual = new WishListPage(driver).GoToWishPage()
+                                                     .GetURL();
             Assert.IsTrue(actual.Contains(expected));
 
         }
