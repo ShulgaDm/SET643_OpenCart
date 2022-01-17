@@ -107,7 +107,7 @@ namespace OpenCartTests.Pages
             CamerasCategory = driver.FindElement(By.LinkText("Cameras"));
             MP3PlayersCategory = driver.FindElement(By.LinkText("MP3 Players"));
             HomePageButton = driver.FindElement(By.Id("logo"));
-            WishlistButton = driver.FindElement(By.XPath("//i[@class='fa fa-heart']"));
+            WishlistButton = driver.FindElement(By.CssSelector("#wishlist-total > span"));
         }
 
         // Atomic Methods

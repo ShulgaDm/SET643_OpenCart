@@ -18,7 +18,7 @@ namespace OpenCartTests.Pages
         public IWebElement AddToWishListButton { get; private set; }
         public IWebElement Price { get; private set; }
 
-
+        
         public ProductDetailsPage(IWebDriver driver) : base(driver)
         {
             ReviewTab = driver.FindElement(By.XPath("//a[contains(@href, '#tab-review')]"));
@@ -29,7 +29,7 @@ namespace OpenCartTests.Pages
             ContinueButton = driver.FindElement(By.Id("button-review"));
             AddToWishListButton = driver.FindElement(By.XPath("//button[@data-original-title='Add to Wish List']//i[@class='fa fa-heart']"));
             Price = driver.FindElement(By.CssSelector(".list-unstyled h2"));
-
+          
         }
 
         public void ClickReviewTab() => ReviewTab.Click();

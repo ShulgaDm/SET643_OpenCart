@@ -42,7 +42,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
         [Test]
         public void EmptyWishListAfterFirstLogin()
         {
-            string expected = Wishlist_URL;
+            
             RegisterPage registerPage = new HomePage(driver).GoToRegisterPage();
 
             registerPage.FillRegisterForm(user);
@@ -50,10 +50,12 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
 
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
+            successPage.GoToWishPage();
+            WishListPage wl = new WishListPage(driver);
 
-            string actual = new WishListPage(driver).GoToWishPage()//
-                                                    .GetURL();
-            Assert.IsTrue(actual.Contains(expected));
+            string actual = wl.GetEmptyWishListMessageText();
+
+            Assert.IsTrue(actual.Contains("Your wish list is empty."));
 
         }
         [Test]
@@ -82,6 +84,23 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
             string actual = new WishListPage(driver).GoToWishPage()
                                                      .GetURL();
             Assert.IsTrue(actual.Contains(expected));
+
+        }
+        [Test]
+        public void DeleteFromWishList()
+        {
+           
+            string homepage = new HomePage(driver)
+                                    .GoToLoginPage()
+                                    .SuccessfullLogin(user1)
+                                    .GoToWishPage()
+                                    .GetURL();           
+            WishListPage wl = new WishListPage(driver);
+            wl.DeleteProduct();            
+            string actual = wl.GetAlertMessageText();
+
+            Assert.IsTrue(actual.Contains("You have modified your wish list"));
+
 
         }
     }
