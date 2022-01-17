@@ -1,0 +1,80 @@
+{
+  "uuid": "82716f31-34e4-4b04-bb4c-1b4e14f237d9-tr-0-1027",
+  "historyId": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.ShowTest",
+  "fullName": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.ShowTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-2CRO4VD"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Cristina_Budzinska"
+    },
+    {
+      "name": "testMethod",
+      "value": "ShowTest"
+    },
+    {
+      "name": "testClass",
+      "value": "SearchPageTest"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "BudCr"
+    }
+  ],
+  "links": [],
+  "name": "ShowTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "ShowTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ShowTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fe9b6498583f4181b8474f8fcb7b8736-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642453964734,
+      "stop": 1642453996081
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642453964734,
+  "stop": 1642453996081
+}
