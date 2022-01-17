@@ -1,0 +1,80 @@
+{
+  "uuid": "6147172b-00fd-48ab-96bc-61bd6eba8da6-tr-0-1017",
+  "historyId": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.MP3PlayersCategoryTest",
+  "fullName": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.MP3PlayersCategoryTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Sereda_Natalia"
+    },
+    {
+      "name": "testMethod",
+      "value": "MP3PlayersCategoryTest"
+    },
+    {
+      "name": "testClass",
+      "value": "CategoriesTests"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "SN"
+    }
+  ],
+  "links": [],
+  "name": "MP3PlayersCategoryTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MP3PlayersCategoryTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MP3PlayersCategoryTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "42357264ff1c433a8824aad415487a74-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642446118179,
+      "stop": 1642446122479
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642446118179,
+  "stop": 1642446122480
+}

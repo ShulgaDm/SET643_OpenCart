@@ -1,0 +1,80 @@
+{
+  "uuid": "acb12241-4a08-4913-b12e-714ead79b178-tr-0-1015",
+  "historyId": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.ComponentsCategoryTest",
+  "fullName": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.ComponentsCategoryTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Sereda_Natalia"
+    },
+    {
+      "name": "testMethod",
+      "value": "ComponentsCategoryTest"
+    },
+    {
+      "name": "testClass",
+      "value": "CategoriesTests"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "SN"
+    }
+  ],
+  "links": [],
+  "name": "ComponentsCategoryTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "ComponentsCategoryTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ComponentsCategoryTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "054524b703b4457491aeb8d2b9b877fe-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642446102934,
+      "stop": 1642446109104
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642446102934,
+  "stop": 1642446109105
+}

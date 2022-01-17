@@ -1,0 +1,46 @@
+{
+  "uuid": "09f885cf-bdaf-4554-803f-8d85d250a8ce-tc-0-1013",
+  "name": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.MP3PlayersCategoryTest",
+  "children": [
+    "6147172b-00fd-48ab-96bc-61bd6eba8da6-tr-0-1017"
+  ],
+  "befores": [
+    {
+      "name": "StartChrome",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446122473,
+      "stop": 1642446122473
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterAllMethods",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446122473,
+      "stop": 1642446122473
+    }
+  ],
+  "links": [],
+  "start": 1642446118179,
+  "stop": 1642446122482
+}
