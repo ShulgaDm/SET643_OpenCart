@@ -16,6 +16,8 @@ namespace OpenCartTests.Pages
         public IList<IWebElement> RatingValues { get; private set; }
         public IWebElement ContinueButton { get; private set; }
         public IWebElement AddToWishListButton { get; private set; }
+        public IWebElement Price { get; private set; }
+
 
         public ProductDetailsPage(IWebDriver driver) : base(driver)
         {
@@ -26,6 +28,8 @@ namespace OpenCartTests.Pages
             RatingValues = driver.FindElements(By.XPath("//input[contains(@type, 'radio')]"));
             ContinueButton = driver.FindElement(By.Id("button-review"));
             AddToWishListButton = driver.FindElement(By.XPath("//button[@data-original-title='Add to Wish List']//i[@class='fa fa-heart']"));
+            Price = driver.FindElement(By.CssSelector(".list-unstyled h2"));
+
         }
 
         public void ClickReviewTab() => ReviewTab.Click();
@@ -44,6 +48,8 @@ namespace OpenCartTests.Pages
 
         // ContinueButton
         public void ClickContinueButton() => ContinueButton.Click();
+        public string GetPriceText() => Price.Text;
+        //public ProductDetailsPage 
 
         public void ClickAddToWishListButton() => AddToWishListButton.Click();
         public ProductDetailsPage AddToWishList()

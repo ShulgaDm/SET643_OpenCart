@@ -169,6 +169,16 @@ namespace OpenCartTests.Pages
             SearchProductField.Clear();
         }
 
+        public void ClickCurrency() => Currency.Click();
+        public void ClickCurrencyOptionByPartialName(string optionName)
+        {
+            ClickCurrency();
+            CreateDropdownOptions(By.CssSelector(".currency-select.btn.btn-link.btn-block"));
+
+            dropdownOptions.ClickDropdownOptionByPartialName(optionName);
+            dropdownOptions = null;
+        }
+
         // Dropdown Methods
 
         private void CreateDropdownOptions(By searchLocator)
@@ -231,5 +241,11 @@ namespace OpenCartTests.Pages
 
         }
 
+        public HomePage ChangeCurrency()
+        {
+            ClickCurrencyOptionByPartialName("Euro");
+
+            return new HomePage(driver);
+        }
     }
 }
