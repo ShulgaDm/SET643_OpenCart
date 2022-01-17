@@ -24,17 +24,18 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
         public void BeforeAllMethods()
         {
             user = User.CreateBuilder()
-              .SetFirstName("Nastya")
-              .SetLastName("Rokytska")
-              .SetEMail("nastya@gmail.com")
+              .SetFirstName("test")
+              .SetLastName("test")
+              .SetEMail("test@gmail.com")
               .SetTelephone("0673256485")
-              .SetPassword("qwerty123")
+              .SetPassword("test")
               .Build();
         }
         [Test]
         public void EmptyShoppingCartWithoutLogging()
         {
             ShoppingCartPage shoppingCartPage = new HomePage(driver).GoToShoppingCartPage();
+            // TODO check whether user is author
             string actualResult = shoppingCartPage.GetEmptyShoppingCartText();
             Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
         }
@@ -45,9 +46,8 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             RegisterPage registerPage = new HomePage(driver).GoToRegisterPage();
             registerPage.FillRegisterForm(user);
             registerPage.ClickAgreeCheckBox();
-
-
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
+            // TODO check whether user is author
             Thread.Sleep(1000);
             string actualResult = new HomePage(driver).GoToShoppingCartPage().GetEmptyShoppingCartText();
             Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
