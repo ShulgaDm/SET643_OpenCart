@@ -73,7 +73,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
         [Test]
         public void AddProductToWishList()
         {
-            string expected = Wishlist_URL;
+            
             string homepage = new HomePage(driver)
                                     .GoToLoginPage()
                                     .SuccessfullLogin(user1)
@@ -81,9 +81,10 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
                                     .GetFirstProductInfo()                                    
                                     .GetURL();
             ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
-            string actual = new WishListPage(driver).GoToWishPage()
-                                                     .GetURL();
-            Assert.IsTrue(actual.Contains(expected));
+            string actual = pd.GetAlertMessageText();
+            //WishListPage wl = new WishListPage(driver).GoToWishPage();
+            
+            Assert.IsTrue(actual.Contains("You have added MacBook to your wish list!"));
 
         }
         [Test]
@@ -102,6 +103,28 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
             Assert.IsTrue(actual.Contains("You have modified your wish list"));
 
 
+        }
+        [Test]
+        public void SavedProductInWishListAfterLogout()
+        {
+
+            string homepage = new HomePage(driver)
+                              .GoToLoginPage()
+                              .SuccessfullLogin(user1)
+                              .GoToHomePage()
+                              .GetFirstProductInfo()
+                              .GetURL();
+            ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
+            WishListPage wp = new WishListPage(driver).GoToWishPage();
+            wp.Logout();
+            string hp = new HomePage(driver)
+                              .GoToLoginPage()
+                              .SuccessfullLogin(user1)
+                              .GoToWishPage()
+                              .GetURL();
+            WishListPage w = new WishListPage(driver);
+            string actual=w.GetTable();
+            Assert.IsTrue(actual.Contains("Image"));
         }
     }
 }
