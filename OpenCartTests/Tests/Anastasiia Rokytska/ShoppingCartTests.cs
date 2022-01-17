@@ -35,7 +35,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
         public void EmptyShoppingCartWithoutLogging()
         {
             ShoppingCartPage shoppingCartPage = new HomePage(driver).GoToShoppingCartPage();
-            // TODO check whether user is author
+            // TODO check whether user is authorized
             string actualResult = shoppingCartPage.GetEmptyShoppingCartText();
             Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
         }
