@@ -1,0 +1,46 @@
+{
+  "uuid": "4de69b84-814a-473e-ac74-7be5e8878952-tc-0-1013",
+  "name": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.LaptopsAndNotebooksCategoryTest",
+  "children": [
+    "1de16af3-3d3f-40b1-95d6-aba327493d97-tr-0-1016"
+  ],
+  "befores": [
+    {
+      "name": "StartChrome",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446118113,
+      "stop": 1642446118113
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterAllMethods",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446118113,
+      "stop": 1642446118113
+    }
+  ],
+  "links": [],
+  "start": 1642446113900,
+  "stop": 1642446118123
+}

@@ -1,0 +1,83 @@
+{
+  "uuid": "588080a6-483a-4a11-b591-5f163b8796c3-tr-0-1018",
+  "historyId": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest",
+  "fullName": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Sereda_Natalia"
+    },
+    {
+      "name": "testMethod",
+      "value": "CategoryRebuildTest"
+    },
+    {
+      "name": "testClass",
+      "value": "CategoriesTests"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "SN"
+    }
+  ],
+  "links": [],
+  "name": "CategoryRebuildTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=97.0.4692.71)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OpenCartTests.Pages.LogInAsAdminPage..ctor(IWebDriver driver) in C:\\Users\\Nataly\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\LogInAsAdminPage.cs:line 18\r\n   at OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest() in C:\\Users\\Nataly\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Tests\\Natalia Sereda\\CategoriesTests.cs:line 123"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CategoryRebuildTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=97.0.4692.71)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OpenCartTests.Pages.LogInAsAdminPage..ctor(IWebDriver driver) in C:\\Users\\Nataly\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\LogInAsAdminPage.cs:line 18\r\n   at OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest() in C:\\Users\\Nataly\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Tests\\Natalia Sereda\\CategoriesTests.cs:line 123"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "404fa521c3e64175a0e0ad7f018c6b33-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642446043740,
+      "stop": 1642446049697
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642446043714,
+  "stop": 1642446049721
+}

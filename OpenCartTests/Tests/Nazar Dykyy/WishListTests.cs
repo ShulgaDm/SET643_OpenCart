@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
@@ -82,7 +82,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
                                     .GetURL();
             ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
             string actual = pd.GetAlertMessageText();
-            //WishListPage wl = new WishListPage(driver).GoToWishPage();
+            
             
             Assert.IsTrue(actual.Contains("You have added MacBook to your wish list!"));
 
@@ -103,7 +103,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
             Assert.IsTrue(actual.Contains("You have modified your wish list"));
 
 
-        }
+        }     
         [Test]
         public void SavedProductInWishListAfterLogout()
         {
@@ -125,6 +125,6 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
             WishListPage w = new WishListPage(driver);
             string actual=w.GetTable();
             Assert.IsTrue(actual.Contains("Image"));
-        }
+          }     
     }
 }

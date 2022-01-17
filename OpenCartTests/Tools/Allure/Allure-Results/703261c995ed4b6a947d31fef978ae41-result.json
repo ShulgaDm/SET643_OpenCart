@@ -1,0 +1,80 @@
+{
+  "uuid": "3afa9feb-2410-4e60-81c7-acdc26c19c46-tr-0-1018",
+  "historyId": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest",
+  "fullName": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Sereda_Natalia"
+    },
+    {
+      "name": "testMethod",
+      "value": "CategoryRebuildTest"
+    },
+    {
+      "name": "testClass",
+      "value": "CategoriesTests"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "SN"
+    }
+  ],
+  "links": [],
+  "name": "CategoryRebuildTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CategoryRebuildTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CategoryRebuildTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "07ca7dd128974ed7b9f4c42be806bf03-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642446090857,
+      "stop": 1642446102721
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642446090853,
+  "stop": 1642446102734
+}

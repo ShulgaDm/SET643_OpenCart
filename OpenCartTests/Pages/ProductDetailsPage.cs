@@ -19,7 +19,7 @@ namespace OpenCartTests.Pages
         public IWebElement Price { get; private set; }
         public IWebElement Alertmessage { get { return driver.FindElement(By.CssSelector(".alert-success:not( .fa-check-circle)")); } }
 
-
+        
         public ProductDetailsPage(IWebDriver driver) : base(driver)
         {
             ReviewTab = driver.FindElement(By.XPath("//a[contains(@href, '#tab-review')]"));
