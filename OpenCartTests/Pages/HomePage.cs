@@ -5,10 +5,12 @@ namespace OpenCartTests.Pages
 {
     public class HomePage : AHeadComponent
     {
+        public IWebElement FeaturedFirstProductPrice { get; private set; }
         public IList<IWebElement> Products { get; private set; }
         public HomePage(IWebDriver driver) : base(driver) 
         {
             Products = driver.FindElements(By.CssSelector(".product-layout"));
+            FeaturedFirstProductPrice = driver.FindElement(By.CssSelector(".price"));
         }
 
         public void ClickOnFirstProduct() => Products[0].Click();
@@ -31,6 +33,11 @@ namespace OpenCartTests.Pages
             SetSearchProductField(searchText);
             SetSearchProductField(Keys.Enter);
             return new SearchResultPage(driver);
+        }
+
+        public string GetFeaturedFirstProductPrice()
+        {
+            return FeaturedFirstProductPrice.Text;
         }
     }
 }

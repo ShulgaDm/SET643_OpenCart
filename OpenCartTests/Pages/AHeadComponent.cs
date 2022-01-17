@@ -241,11 +241,25 @@ namespace OpenCartTests.Pages
 
         }
 
-        public HomePage ChangeCurrency()
+        public HomePage ChangeCurrencyOnHomePage()
         {
             ClickCurrencyOptionByPartialName("Euro");
 
             return new HomePage(driver);
+        }
+
+        public ProductDetailsPage ChangeCurrencyOnDetailsPage()
+        {
+            ClickCurrencyOptionByPartialName("Euro");
+
+            return new ProductDetailsPage(driver);
+        }
+
+        public WishListPage ChangeCurrencyOnWishListPage()
+        {
+            ClickCurrencyOptionByPartialName("Euro");
+
+            return new WishListPage(driver);
         }
     }
 }
