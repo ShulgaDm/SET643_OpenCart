@@ -47,7 +47,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             registerPage.FillRegisterForm(user);
             registerPage.ClickAgreeCheckBox();
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
-            // TODO check whether user is author
+            // TODO check whether user is authorized
             Thread.Sleep(1000);
             string actualResult = new HomePage(driver).GoToShoppingCartPage().GetEmptyShoppingCartText();
             Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
