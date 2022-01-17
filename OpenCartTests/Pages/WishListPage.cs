@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
@@ -16,12 +16,18 @@ namespace OpenCartTests.Pages
         
         public IWebElement Alertmessage { get { return driver.FindElement(By.CssSelector(".alert-success:not( .fa-check-circle)")); } }
         public IWebElement EmptyWishListMessage { get { return driver.FindElement(By.CssSelector("#content > p")); } }
+        public IWebElement Table { get { return driver.FindElement(By.CssSelector("#content > div.table-responsive")); } }
+
         public WishListPage(IWebDriver driver) : base(driver)
         {           
             
             
         }
 
+        public string GetTable()
+        {
+            return Table.Text;
+        }
 
 
         public void DeleteProduct()

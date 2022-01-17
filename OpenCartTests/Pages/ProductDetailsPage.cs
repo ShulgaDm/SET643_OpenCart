@@ -17,6 +17,7 @@ namespace OpenCartTests.Pages
         public IWebElement ContinueButton { get; private set; }
         public IWebElement AddToWishListButton { get; private set; }
         public IWebElement Price { get; private set; }
+        public IWebElement Alertmessage { get { return driver.FindElement(By.CssSelector(".alert-success:not( .fa-check-circle)")); } }
 
         
         public ProductDetailsPage(IWebDriver driver) : base(driver)
@@ -52,6 +53,10 @@ namespace OpenCartTests.Pages
         //public ProductDetailsPage 
 
         public void ClickAddToWishListButton() => AddToWishListButton.Click();
+        public string GetAlertMessageText()
+        {
+            return Alertmessage.Text;
+        }
         public ProductDetailsPage AddToWishList()
         {
             ClickAddToWishListButton();
