@@ -15,6 +15,7 @@ namespace OpenCartTests.Pages
         public IWebElement YourReviewField { get; private set; }
         public IList<IWebElement> RatingValues { get; private set; }
         public IWebElement ContinueButton { get; private set; }
+        public IWebElement AddToWishListButton { get; private set; }
 
         public ProductDetailsPage(IWebDriver driver) : base(driver)
         {
@@ -24,6 +25,7 @@ namespace OpenCartTests.Pages
             YourReviewField = driver.FindElement(By.Id("input-review"));
             RatingValues = driver.FindElements(By.XPath("//input[contains(@type, 'radio')]"));
             ContinueButton = driver.FindElement(By.Id("button-review"));
+            AddToWishListButton = driver.FindElement(By.XPath("//button[@data-original-title='Add to Wish List']//i[@class='fa fa-heart']"));
         }
 
         public void ClickReviewTab() => ReviewTab.Click();
@@ -42,6 +44,13 @@ namespace OpenCartTests.Pages
 
         // ContinueButton
         public void ClickContinueButton() => ContinueButton.Click();
+
+        public void ClickAddToWishListButton() => AddToWishListButton.Click();
+        public ProductDetailsPage AddToWishList()
+        {
+            ClickAddToWishListButton();
+            return new ProductDetailsPage(driver);
+        }
 
         // RatingValues
         public IWebElement GetRatingByValue(string value)

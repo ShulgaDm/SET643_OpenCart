@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 
 namespace OpenCartTests.Pages
 {
-    public class WishListPage : ARightMenuComponent
+    public class WishListPage : AHeadComponent
     {
-        public IWebElement VerifyWishList { get; private set; }
+        public IWebElement Wishproduct { get; private set; }
+
         public WishListPage(IWebDriver driver) : base(driver)
         {
-            VerifyWishList = driver.FindElement(By.CssSelector (".container .row .col-sm-9 p"));
-        }
+            Wishproduct = driver.FindElement(By.Id("content"));
 
-        public string GetVerifyWishListText() => VerifyWishList.Text;
-
-        public void VerifyWishListPage()
-        {
-            GetVerifyWishListText();
         }
     }
 }
