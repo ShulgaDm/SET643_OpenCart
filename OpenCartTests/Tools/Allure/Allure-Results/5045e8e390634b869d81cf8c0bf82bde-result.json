@@ -1,0 +1,76 @@
+{
+  "uuid": "3facafdc-af79-4abd-89cc-275a82dd2a3c-tr-0-1008",
+  "historyId": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.SuccessfullAddReviewTest",
+  "fullName": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.SuccessfullAddReviewTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Shulga_Dmytro"
+    },
+    {
+      "name": "testMethod",
+      "value": "SuccessfullAddReviewTest"
+    },
+    {
+      "name": "testClass",
+      "value": "FeedbackTests"
+    },
+    {
+      "name": "tag",
+      "value": "Feedback"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "ShD"
+    }
+  ],
+  "links": [],
+  "name": "SuccessfullAddReviewTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "SuccessfullAddReviewTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "SuccessfullAddReviewTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "db6a3a6c5ba04ce29a19165bc7e45d1d-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642440128448,
+      "stop": 1642440155980
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642440128448,
+  "stop": 1642440155980
+}

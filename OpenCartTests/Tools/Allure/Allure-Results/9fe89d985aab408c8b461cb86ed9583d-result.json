@@ -1,0 +1,80 @@
+{
+  "uuid": "449488b8-c4ea-4d9d-a416-01af675ac8d4-tr-0-1007",
+  "historyId": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.CheckProductWithEmptyReview",
+  "fullName": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.CheckProductWithEmptyReview",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Shulga_Dmytro"
+    },
+    {
+      "name": "testMethod",
+      "value": "CheckProductWithEmptyReview"
+    },
+    {
+      "name": "testClass",
+      "value": "FeedbackTests"
+    },
+    {
+      "name": "tag",
+      "value": "Feedback"
+    },
+    {
+      "name": "tag",
+      "value": "Feedback"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "ShD"
+    }
+  ],
+  "links": [],
+  "name": "CheckProductWithEmptyReview",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CheckProductWithEmptyReview"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CheckProductWithEmptyReview",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d0454ed69abf4b45a597a6dc5c8b0d60-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642440903841,
+      "stop": 1642440918506
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642440903841,
+  "stop": 1642440918514
+}

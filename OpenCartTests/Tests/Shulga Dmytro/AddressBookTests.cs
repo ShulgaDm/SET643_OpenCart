@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using NUnit.Framework;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
@@ -6,6 +9,8 @@ using OpenCartTests.Tools;
 namespace OpenCartTests.Tests.Shulga_Dmytro
 {
     [TestFixture]
+    [AllureNUnit]
+    [Category("AddressBook")]
     public class AddressBookTests : TestRunner
     {
         protected override string OpenCartURL { get => "http://cart"; }
@@ -35,6 +40,9 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
         }
 
         [Test]
+        [AllureTag("AddressBook")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ShD")]
         public void UnloggedClickAddressBookButton()
         {
             string expected = LOGIN_URL;
@@ -48,6 +56,9 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
         }
 
         [Test]
+        [AllureTag("AddressBook")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ShD")]
         public void LoggedClickAddressBookButton()
         {
             string expected = ADDRESS_BOOK_URL;
@@ -62,6 +73,9 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
         }
 
         [Test]
+        [AllureTag("AddressBook")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ShD")]
         public void SuccessfullAddNewAddressTest()
         {
             string expected = EXPECTED_SUCCESSFULL_ADD_ADDRESS_MESSAGE;

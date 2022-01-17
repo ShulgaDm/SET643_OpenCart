@@ -1,3 +1,6 @@
+using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
@@ -6,6 +9,8 @@ using OpenCartTests.Tools;
 namespace OpenCartTests.Tests.Shulga_Dmytro
 {
     [TestFixture]
+    [AllureNUnit]
+    [Category("Feedback")]
     public class FeedbackTests : TestRunner
     {
         protected override string OpenCartURL { get => "http://cart"; }
@@ -25,6 +30,9 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
         }
 
         [Test]
+        [AllureTag("Feedback")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ShD")]
         public void CheckProductWithEmptyReview()
         {
             string expected = EXPECTED_NO_REVIEWS_MESSAGE;
@@ -38,6 +46,9 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
         }
 
         [Test]
+        [AllureTag("Feedback")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ShD")]
         public void SuccessfullAddReviewTest()
         {
             string expected = EXPECTED_SUCCESSFULL_ADD_REVIEW_MESSAGE;
