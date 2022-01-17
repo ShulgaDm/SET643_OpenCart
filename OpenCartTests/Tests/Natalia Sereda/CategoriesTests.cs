@@ -5,11 +5,15 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenCartTests.Pages;
-
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace OpenCartTests.Tests.Sereda_Natalia
 {
-
+  
+    [AllureNUnit]
+    [Category("Category")]
     [TestFixture]
   class CategoriesTests
     {
@@ -40,14 +44,22 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             Console.WriteLine("Expected: " + CategoryExpected + " Actual in Left: " + actualInLeftMenu + " Actual in Content: " + actualInContent);
             Assert.AreEqual(CategoryExpected, actualInContent);
         }
-      
+
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
         [Test]
         public void DesktopCategoryTest()
         {
             string CategoryExpected = "Desktops";
             CategoryIsVisibleTest(CategoryExpected);
         }
-      
+
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
         [Test]
         public void ComponentsCategoryTest()
         {
@@ -56,12 +68,21 @@ namespace OpenCartTests.Tests.Sereda_Natalia
 
         }
 
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
         [Test]
         public void LaptopsAndNotebooksCategoryTest()
         {
             string CategoryExpected = "Laptops & Notebooks";
             CategoryIsVisibleTest(CategoryExpected);
         }
+
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
         [Test]
         public void MP3PlayersCategoryTest()
         {
@@ -69,12 +90,16 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             CategoryIsVisibleTest(CategoryExpected);
         }
 
-        //[Test]
-        //public void TabletsCategoryTest()
-        //{
-        //    string CategoryExpected = "Tablets";
-        //    CategoryIsVisibleTest(CategoryExpected);
-        //}
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
+        [Test]
+        public void TabletsCategoryTest()
+        {
+            string CategoryExpected = "Tablets";
+            CategoryIsVisibleTest(CategoryExpected);
+        }
 
         //[Test]
         //public void CamerasCategoryTest()
@@ -89,6 +114,11 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         //    CategoryIsVisibleTest(CategoryExpected);
         //}
 
+
+
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("SN")]
         [Test]
         public void CategoryRebuildTest()
         {
