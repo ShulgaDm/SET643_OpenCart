@@ -1,0 +1,59 @@
+{
+  "uuid": "cd00878d-007c-4b21-a231-e5ef04a56ff5-tc-0-1006",
+  "name": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.SuccessfullAddReviewTest",
+  "children": [
+    "3facafdc-af79-4abd-89cc-275a82dd2a3c-tr-0-1008"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440155978,
+      "stop": 1642440155978
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440155978,
+      "stop": 1642440155978
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440155978,
+      "stop": 1642440155978
+    }
+  ],
+  "links": [],
+  "start": 1642440128448,
+  "stop": 1642440155984
+}

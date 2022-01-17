@@ -1,0 +1,59 @@
+{
+  "uuid": "ec079938-52a9-49cf-a0cc-032852d963fd-tc-0-1002",
+  "name": "OpenCartTests.Tests.Shulga_Dmytro.AddressBookTests.SuccessfullAddNewAddressTest",
+  "children": [
+    "97bbe606-88d4-4ea2-8e88-aaa4f0b4beb1-tr-0-1005"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441280149,
+      "stop": 1642441280149
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441280149,
+      "stop": 1642441280149
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441280149,
+      "stop": 1642441280149
+    }
+  ],
+  "links": [],
+  "start": 1642441222461,
+  "stop": 1642441280153
+}

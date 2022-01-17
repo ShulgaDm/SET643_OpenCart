@@ -1,0 +1,59 @@
+{
+  "uuid": "4520185c-1d99-48e4-a191-1db9578fb537-tc-0-1006",
+  "name": "OpenCartTests.Tests.Shulga_Dmytro.FeedbackTests.CheckProductWithEmptyReview",
+  "children": [
+    "449488b8-c4ea-4d9d-a416-01af675ac8d4-tr-0-1007"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440918497,
+      "stop": 1642440918497
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440918498,
+      "stop": 1642440918498
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642440918498,
+      "stop": 1642440918498
+    }
+  ],
+  "links": [],
+  "start": 1642440903836,
+  "stop": 1642440918575
+}

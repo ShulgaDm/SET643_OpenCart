@@ -1,0 +1,59 @@
+{
+  "uuid": "5e06b765-bb4d-4bdd-a7ef-57a12ecb64e1-tc-0-1002",
+  "name": "OpenCartTests.Tests.Shulga_Dmytro.AddressBookTests.LoggedClickAddressBookButton",
+  "children": [
+    "8aea0462-0b87-4692-88df-145dcc3afe1b-tr-0-1004"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441222387,
+      "stop": 1642441222387
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441222387,
+      "stop": 1642441222387
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642441222387,
+      "stop": 1642441222387
+    }
+  ],
+  "links": [],
+  "start": 1642441187354,
+  "stop": 1642441222432
+}
