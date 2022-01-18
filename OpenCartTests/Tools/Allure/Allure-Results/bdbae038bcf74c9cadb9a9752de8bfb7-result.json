@@ -1,0 +1,80 @@
+{
+  "uuid": "d0a9e20f-ede6-45d7-8f05-e5be36cfc0e6-tr-0-1013",
+  "historyId": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.InaccessibleWishListWithoutLogging",
+  "fullName": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.InaccessibleWishListWithoutLogging",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-0LHUVFI"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Nazar_Dykyy"
+    },
+    {
+      "name": "testMethod",
+      "value": "InaccessibleWishListWithoutLogging"
+    },
+    {
+      "name": "testClass",
+      "value": "WishListTests"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "ND"
+    }
+  ],
+  "links": [],
+  "name": "InaccessibleWishListWithoutLogging",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "InaccessibleWishListWithoutLogging"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "InaccessibleWishListWithoutLogging",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fbc0741cb7644a2f977f93e5e686d908-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642503021470,
+      "stop": 1642503047600
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642503021470,
+  "stop": 1642503047601
+}

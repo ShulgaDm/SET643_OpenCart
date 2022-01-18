@@ -1,0 +1,80 @@
+{
+  "uuid": "d5eb0663-fa7a-41da-b251-bdf81d0279ac-tr-0-1016",
+  "historyId": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.SavedProductInWishListAfterLogout",
+  "fullName": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.SavedProductInWishListAfterLogout",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-0LHUVFI"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Nazar_Dykyy"
+    },
+    {
+      "name": "testMethod",
+      "value": "SavedProductInWishListAfterLogout"
+    },
+    {
+      "name": "testClass",
+      "value": "WishListTests"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "ND"
+    }
+  ],
+  "links": [],
+  "name": "SavedProductInWishListAfterLogout",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "SavedProductInWishListAfterLogout"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "SavedProductInWishListAfterLogout",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "3817cf2b22d847d6b5fc1cf385625523-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642503727346,
+      "stop": 1642503871067
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642503727346,
+  "stop": 1642503871067
+}

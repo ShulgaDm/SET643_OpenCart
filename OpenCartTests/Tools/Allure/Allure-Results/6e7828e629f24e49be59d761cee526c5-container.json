@@ -1,0 +1,59 @@
+{
+  "uuid": "80b44ae3-9cda-4a67-a255-41c0aed17d77-tc-0-1011",
+  "name": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.DeleteFromWishList",
+  "children": [
+    "62b7cbd3-03eb-455b-b576-69e737ab352e-tr-0-1015"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503445022,
+      "stop": 1642503445022
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503445022,
+      "stop": 1642503445022
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503445022,
+      "stop": 1642503445022
+    }
+  ],
+  "links": [],
+  "start": 1642503397979,
+  "stop": 1642503445029
+}
