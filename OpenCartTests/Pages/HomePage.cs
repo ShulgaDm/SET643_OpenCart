@@ -6,11 +6,13 @@ namespace OpenCartTests.Pages
     public class HomePage : AHeadComponent
     {
         public IWebElement FeaturedFirstProductPrice { get; private set; }
+        public IWebElement CurrencySymbol { get; private set; }
         public IList<IWebElement> Products { get; private set; }
         public HomePage(IWebDriver driver) : base(driver) 
         {
             Products = driver.FindElements(By.CssSelector(".product-layout"));
             FeaturedFirstProductPrice = driver.FindElement(By.CssSelector(".price"));
+            CurrencySymbol = driver.FindElement(By.TagName("strong"));
         }
 
         public void ClickOnFirstProduct() => Products[0].Click();
@@ -38,6 +40,11 @@ namespace OpenCartTests.Pages
         public string GetFeaturedFirstProductPrice()
         {
             return FeaturedFirstProductPrice.Text;
+        }
+
+        public string GetCurrencySymbol()
+        {
+            return CurrencySymbol.Text;
         }
     }
 }
