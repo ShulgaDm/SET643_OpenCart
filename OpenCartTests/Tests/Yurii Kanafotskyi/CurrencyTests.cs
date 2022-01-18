@@ -74,5 +74,17 @@ namespace OpenCartTests.Tests.Yurii_Kanafotskyi
 
             Assert.AreNotEqual(expected, actual);
         }
+
+        [Test]
+        public void ChangeableCurrencySymbol()
+        {
+            string expected = "€";
+
+            _ = new HomePage(driver).ChangeCurrencyOnHomePage();
+
+            string actual = new HomePage(driver).GetCurrencySymbol();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
