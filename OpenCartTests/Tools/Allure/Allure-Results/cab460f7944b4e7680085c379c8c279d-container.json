@@ -1,0 +1,59 @@
+{
+  "uuid": "81e9f1b8-019a-420c-a242-7961070398c4-tc-0-1011",
+  "name": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.SavedProductInWishListAfterLogout",
+  "children": [
+    "fce21ed1-2de6-442d-adb8-3beb8beca226-tr-0-1016"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503095944,
+      "stop": 1642503095944
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503095944,
+      "stop": 1642503095944
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642503095944,
+      "stop": 1642503095944
+    }
+  ],
+  "links": [],
+  "start": 1642503047608,
+  "stop": 1642503095947
+}

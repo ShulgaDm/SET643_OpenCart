@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
@@ -11,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace OpenCartTests.Tests.Nazar_Dykyy
 {
+    [TestFixture]
+    [AllureNUnit]
+    [Category("WishList")]
     public class WishListTests : TestRunner
     {
         protected override string OpenCartURL { get => "http://localhost"; }
@@ -40,6 +46,9 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void EmptyWishListAfterFirstLogin()
         {
             
@@ -59,6 +68,9 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void InaccessibleWishListWithoutLogging()
         {
             string expected = LOGIN_URL;
@@ -71,6 +83,9 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void AddProductToWishList()
         {
             
@@ -88,6 +103,9 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void DeleteFromWishList()
         {
            
@@ -105,6 +123,9 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }     
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void SavedProductInWishListAfterLogout()
         {
 
