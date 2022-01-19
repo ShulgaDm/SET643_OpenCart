@@ -1,0 +1,80 @@
+{
+  "uuid": "279a4722-4683-43f5-a14e-51267f9c8696-tr-0-1038",
+  "historyId": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.AddItemToShoppingCartWithoutLogging",
+  "fullName": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.AddItemToShoppingCartWithoutLogging",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KLLKES4"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Anastasiia_Rokytska"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemToShoppingCartWithoutLogging"
+    },
+    {
+      "name": "testClass",
+      "value": "ShoppingCartTests"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AR"
+    }
+  ],
+  "links": [],
+  "name": "AddItemToShoppingCartWithoutLogging",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "AddItemToShoppingCartWithoutLogging"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddItemToShoppingCartWithoutLogging",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "315b130d10274178b0a31ea8ae17d865-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642502370811,
+      "stop": 1642502449727
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642502370801,
+  "stop": 1642502449731
+}

@@ -12,11 +12,17 @@ namespace OpenCartTests.Pages
         }
 
         public void ClickOnFirstProduct() => Products[0].Click();
+        public void ClickOnProductByIndex(int index) => Products[index].Click();
 
         public ProductDetailsPage GetFirstProductDetails()
         {
             ClickOnFirstProduct();
             return new ProductDetailsPage(driver);
+        }
+        public HomePage GetProductDetails(int index)
+        {
+            ClickOnProductByIndex(index);
+            return new HomePage(driver);
         }
 
         public HomePage GetFirstProductInfo()

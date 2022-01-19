@@ -196,6 +196,12 @@ namespace OpenCartTests.Pages
             return new ShoppingCartPage(driver);
         }
 
+        public EmptyShoppingCartPage GoToEmptyShoppingCartPage()
+        {
+            ClickShoppingCart();
+            return new EmptyShoppingCartPage(driver);
+        }
+
         public LoginPage GoToLoginPage()
         {
             if (LoggedUser)

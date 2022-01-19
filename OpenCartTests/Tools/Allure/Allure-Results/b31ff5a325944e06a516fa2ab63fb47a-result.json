@@ -1,0 +1,80 @@
+{
+  "uuid": "f2d6f2a5-b4c8-4a43-8913-1c5e9eb566b0-tr-0-1036",
+  "historyId": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging",
+  "fullName": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KLLKES4"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Anastasiia_Rokytska"
+    },
+    {
+      "name": "testMethod",
+      "value": "EmptyShoppingCartWithoutLogging"
+    },
+    {
+      "name": "testClass",
+      "value": "ShoppingCartTests"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AR"
+    }
+  ],
+  "links": [],
+  "name": "EmptyShoppingCartWithoutLogging",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "EmptyShoppingCartWithoutLogging"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EmptyShoppingCartWithoutLogging",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "be73249b465c4142b3bccd694242b1fb-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642623590389,
+      "stop": 1642623595661
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642623590388,
+  "stop": 1642623595666
+}
