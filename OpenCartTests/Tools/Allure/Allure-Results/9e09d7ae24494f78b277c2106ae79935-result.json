@@ -1,0 +1,83 @@
+{
+  "uuid": "fe5c45ba-0325-40b6-a27f-f4506f24c250-tr-0-1036",
+  "historyId": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging",
+  "fullName": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KLLKES4"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Anastasiia_Rokytska"
+    },
+    {
+      "name": "testMethod",
+      "value": "EmptyShoppingCartWithoutLogging"
+    },
+    {
+      "name": "testClass",
+      "value": "ShoppingCartTests"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AR"
+    }
+  ],
+  "links": [],
+  "name": "EmptyShoppingCartWithoutLogging",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id='content']/form/div/table/tbody/tr/td[4]/div/span/button[2]\"}\n  (Session info: chrome=97.0.4692.71)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OpenCartTests.Pages.ShoppingCartPage..ctor(IWebDriver driver) in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\ShoppingCartPage.cs:line 20\r\n   at OpenCartTests.Pages.AHeadComponent.GoToShoppingCartPage() in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\AHeadComponent.cs:line 196\r\n   at OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging() in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Tests\\Anastasiia Rokytska\\ShoppingCartTests.cs:line 74"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EmptyShoppingCartWithoutLogging",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id='content']/form/div/table/tbody/tr/td[4]/div/span/button[2]\"}\n  (Session info: chrome=97.0.4692.71)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OpenCartTests.Pages.ShoppingCartPage..ctor(IWebDriver driver) in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\ShoppingCartPage.cs:line 20\r\n   at OpenCartTests.Pages.AHeadComponent.GoToShoppingCartPage() in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Pages\\AHeadComponent.cs:line 196\r\n   at OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging() in C:\\Users\\Настя\\source\\repos\\SET643_OpenCart\\OpenCartTests\\Tests\\Anastasiia Rokytska\\ShoppingCartTests.cs:line 74"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "956bf8684dc1407582fd17192a71a4b6-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642623539418,
+      "stop": 1642623554609
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642623539417,
+  "stop": 1642623554613
+}

@@ -15,6 +15,7 @@ namespace OpenCartTests.Pages
         public IWebElement YourReviewField { get; private set; }
         public IList<IWebElement> RatingValues { get; private set; }
         public IWebElement ContinueButton { get; private set; }
+        public IWebElement AddToShoppingCartButton { get; private set; }
         public IWebElement AddToWishListButton { get; private set; }
         public IWebElement Price { get; private set; }
         public IWebElement Alertmessage { get { return driver.FindElement(By.CssSelector(".alert-success:not( .fa-check-circle)")); } }
@@ -28,6 +29,7 @@ namespace OpenCartTests.Pages
             YourReviewField = driver.FindElement(By.Id("input-review"));
             RatingValues = driver.FindElements(By.XPath("//input[contains(@type, 'radio')]"));
             ContinueButton = driver.FindElement(By.Id("button-review"));
+            AddToShoppingCartButton = driver.FindElement(By.Id("button-cart"));
             AddToWishListButton = driver.FindElement(By.XPath("//button[@data-original-title='Add to Wish List']//i[@class='fa fa-heart']"));
             Price = driver.FindElement(By.CssSelector(".list-unstyled h2"));
           
@@ -52,6 +54,9 @@ namespace OpenCartTests.Pages
         public string GetPriceText() => Price.Text;
         //public ProductDetailsPage 
 
+        //AddToShoppingCartButton
+        public void ClickAddToShoppingCartButton() => AddToShoppingCartButton.Click();
+
         public void ClickAddToWishListButton() => AddToWishListButton.Click();
         public string GetAlertMessageText()
         {
@@ -62,6 +67,8 @@ namespace OpenCartTests.Pages
             ClickAddToWishListButton();
             return new ProductDetailsPage(driver);
         }
+
+   
 
         // RatingValues
         public IWebElement GetRatingByValue(string value)
@@ -128,6 +135,12 @@ namespace OpenCartTests.Pages
             FillForm(correctReview);
             ClickContinueButton();
             return new ProductDetailsMessagePage(driver);
+        }
+
+        public ProductDetailsPage AddToShoppingCart()
+        {
+            ClickAddToShoppingCartButton();
+            return new ProductDetailsPage(driver);
         }
     }
 }
