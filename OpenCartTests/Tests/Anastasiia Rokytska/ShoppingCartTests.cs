@@ -15,11 +15,25 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
     [Category("ShoppingCart")]
     public class ShoppingCartTests : TestRunner
     {
-        //protected override string OpenCartURL { get => "http://localhost/index.php?route=checkout/cart"; }
         private readonly string EMPTY_SHOPPING_CART_TEXT = "Your shopping cart is empty!";
         protected override string OpenCartURL { get => "http://localhost"; }
 
         User user1, user2, user3, user4;
+
+
+        public void VerifyInputFieldsForProduct()
+        {
+            CheckInputFieldNotEmptyShoppingCart("10.2", "10");
+            CheckInputFieldNotEmptyShoppingCart("3,9", "3");
+            CheckInputFieldNotEmptyShoppingCart("10000000000", "2147483647");
+            CheckInputFieldEmptyShoppingCart("-7");
+            CheckInputFieldEmptyShoppingCart("abc");
+            CheckInputFieldEmptyShoppingCart("");
+            CheckInputFieldEmptyShoppingCart("0");
+            CheckInputFieldEmptyShoppingCart("0.6");
+            CheckInputFieldEmptyShoppingCart("0,2");
+        }
+
 
         public void CheckInputFieldEmptyShoppingCart(string data)
         {
@@ -27,6 +41,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             HomePage homePage = new HomePage(driver).GoToShoppingCartPage().EnterInputFieldForFirstProduct(data);
             VerifyEmptyShoppingCart();
         }
+
 
         public void CheckInputFieldNotEmptyShoppingCart(string data, string expected)
         {
@@ -61,6 +76,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             Assert.AreEqual(totalPrice, price);
         }
 
+
         public User CreateUser()
         {
             var rand = new Random();
@@ -90,7 +106,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             user1 = CreateUser();
             user2 = CreateUser();
             user3 = CreateUser();
-            //user4 = CreateUser();
+            user4 = CreateUser();
         }
 
 
@@ -100,10 +116,7 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
         [AllureOwner("AR")]
         public void EmptyShoppingCartWithoutLogging()
         {
-
-
             VerifyEmptyShoppingCart();
-
         }
 
 
@@ -166,20 +179,22 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
 
         [Test]
         [Category("ShoppingCart")]
-        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureOwner("AR")]
-        public void ValidatePoductField()
+        public void ValidatePoductFieldWithoutLoginning()
         {
-            CheckInputFieldNotEmptyShoppingCart("10.2", "10");
-            CheckInputFieldNotEmptyShoppingCart("3,9", "3");
-            CheckInputFieldNotEmptyShoppingCart("10000000000", "2147483647");
-            CheckInputFieldEmptyShoppingCart("-7");
-            CheckInputFieldEmptyShoppingCart("abc");
-            CheckInputFieldEmptyShoppingCart("");
-            CheckInputFieldEmptyShoppingCart("0");
-            CheckInputFieldEmptyShoppingCart("0.6");
-            CheckInputFieldEmptyShoppingCart("0,2");
+            VerifyInputFieldsForProduct();
+        }
 
+
+        [Test]
+        [Category("ShoppingCart")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AR")]
+        public void ValidatePoductFieldWithLoginning()
+        {
+            RegisterUser(user4);
+            VerifyInputFieldsForProduct();
         }
 
 

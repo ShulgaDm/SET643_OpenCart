@@ -16,8 +16,8 @@ namespace OpenCartTests.Pages
             EmptyShoppingCartContent = driver.FindElement(By.XPath("//*[@id='content']/p"));
             
         }
+
         public string GetEmptyShoppingCartText() => EmptyShoppingCartContent.Text;
       
-
     }
 }
