@@ -1,0 +1,80 @@
+{
+  "uuid": "5b151ef9-120d-4144-aebc-36fc0cad28ba-tr-0-1023",
+  "historyId": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.SearchResultPageListGridViewTests",
+  "fullName": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.SearchResultPageListGridViewTests",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-2CRO4VD"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Cristina_Budzinska"
+    },
+    {
+      "name": "testMethod",
+      "value": "SearchResultPageListGridViewTests"
+    },
+    {
+      "name": "testClass",
+      "value": "SearchPageTest"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "BudCr"
+    }
+  ],
+  "links": [],
+  "name": "SearchResultPageListGridViewTests",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "SearchResultPageListGridViewTests"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "SearchResultPageListGridViewTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "da3329a2d95947b498e5c24575d415e3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642453926035,
+      "stop": 1642453943779
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642453926035,
+  "stop": 1642453943779
+}

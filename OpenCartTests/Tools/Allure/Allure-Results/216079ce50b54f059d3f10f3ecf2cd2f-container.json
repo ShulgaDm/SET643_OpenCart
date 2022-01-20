@@ -1,0 +1,44 @@
+{
+  "uuid": "50f9a344-97fd-46be-a7f6-b3f1dd9c796d-tc-0-1021",
+  "name": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.SortByTest",
+  "children": [
+    "4d700510-714a-4824-aa34-06a6b890fa0f-tr-0-1026"
+  ],
+  "befores": [
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642454028851,
+      "stop": 1642454028851
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642454028851,
+      "stop": 1642454028851
+    }
+  ],
+  "links": [],
+  "start": 1642453996102,
+  "stop": 1642454028874
+}
