@@ -1,0 +1,80 @@
+{
+  "uuid": "5f71de70-a5df-4f7d-a069-c5c883546561-tr-0-1042",
+  "historyId": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.ValidatePoductFieldWithoutLoginning",
+  "fullName": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.ValidatePoductFieldWithoutLoginning",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KLLKES4"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Anastasiia_Rokytska"
+    },
+    {
+      "name": "testMethod",
+      "value": "ValidatePoductFieldWithoutLoginning"
+    },
+    {
+      "name": "testClass",
+      "value": "ShoppingCartTests"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "AR"
+    }
+  ],
+  "links": [],
+  "name": "ValidatePoductFieldWithoutLoginning",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "ValidatePoductFieldWithoutLoginning"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ValidatePoductFieldWithoutLoginning",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6f6db7739aa84f44af6983290912b4c3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642671281511,
+      "stop": 1642672078260
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642671281511,
+  "stop": 1642672078260
+}

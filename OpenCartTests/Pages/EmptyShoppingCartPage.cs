@@ -13,8 +13,7 @@ namespace OpenCartTests.Pages
        
         public EmptyShoppingCartPage(IWebDriver driver) : base(driver)
         {
-            EmptyShoppingCartContent = driver.FindElement(By.XPath("//*[@id='content']/p"));
-            
+            EmptyShoppingCartContent = driver.FindElement(By.XPath("//*[@id='content']/p"));       
         }
 
         public string GetEmptyShoppingCartText() => EmptyShoppingCartContent.Text;

@@ -21,62 +21,6 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
         User user1, user2, user3, user4;
 
 
-        public void VerifyInputFieldsForProduct()
-        {
-            CheckInputFieldNotEmptyShoppingCart("10.2", "10");
-            CheckInputFieldNotEmptyShoppingCart("3,9", "3");
-            CheckInputFieldNotEmptyShoppingCart("10000000000", "2147483647");
-            CheckInputFieldEmptyShoppingCart("-7");
-            CheckInputFieldEmptyShoppingCart("abc");
-            CheckInputFieldEmptyShoppingCart("");
-            CheckInputFieldEmptyShoppingCart("0");
-            CheckInputFieldEmptyShoppingCart("0.6");
-            CheckInputFieldEmptyShoppingCart("0,2");
-        }
-
-
-        public void CheckInputFieldEmptyShoppingCart(string data)
-        {
-            VerifyOneProductAdding();
-            HomePage homePage = new HomePage(driver).GoToShoppingCartPage().EnterInputFieldForFirstProduct(data);
-            VerifyEmptyShoppingCart();
-        }
-
-
-        public void CheckInputFieldNotEmptyShoppingCart(string data, string expected)
-        {
-            VerifyOneProductAdding();
-            HomePage homePage = new HomePage(driver).GoToShoppingCartPage().EnterInputFieldForFirstProduct(data);
-            string actual = new ShoppingCartPage(driver).GetInputFieldForFirstProductText();
-            DeleteProductFromShoppingCart();
-            Assert.AreEqual(expected, actual);
-
-        }
-
-
-        public void DeleteProductFromShoppingCart()
-        {
-            new HomePage(driver).GoToShoppingCartPage().DeleteProduct();
-        }
-
-
-        public void VerifyEmptyShoppingCart()
-        {
-            string actualResult = new HomePage(driver).GoToEmptyShoppingCartPage().GetEmptyShoppingCartText();
-            Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
-        }
-
-
-        public void VerifyOneProductAdding()
-        {
-            HomePage homepage = new HomePage(driver).GoToHomePage().GetProductDetails(0); ;
-            string price = new ProductDetailsPage(driver).GetPriceText();
-            ProductDetailsPage pd = new ProductDetailsPage(driver).AddToShoppingCart();
-            string totalPrice = homepage.GoToShoppingCartPage().GetTotalPriceText();
-            Assert.AreEqual(totalPrice, price);
-        }
-
-
         public User CreateUser()
         {
             var rand = new Random();
@@ -97,6 +41,60 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             registerPage.FillRegisterForm(data);
             registerPage.ClickAgreeCheckBox();
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
+        }
+
+
+        public void VerifyOneProductAdding()
+        {
+            HomePage homepage = new HomePage(driver).GoToHomePage().GetProductDetails(0); 
+            string price = new ProductDetailsPage(driver).GetPriceText();
+            ProductDetailsPage pd = new ProductDetailsPage(driver).AddToShoppingCart();
+            string totalPrice = homepage.GoToShoppingCartPage().GetTotalPriceText();
+            Assert.AreEqual(totalPrice, price);
+        }
+
+
+        public void DeleteProductFromShoppingCart()
+        {
+            new HomePage(driver).GoToShoppingCartPage().DeleteProduct();
+        }
+
+
+        public void VerifyEmptyShoppingCart()
+        {
+            string actualResult = new HomePage(driver).GoToEmptyShoppingCartPage().GetEmptyShoppingCartText();
+            Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
+        }
+
+
+        public void CheckInputFieldNotEmptyShoppingCart(string data, string expected)
+        {
+            VerifyOneProductAdding();
+            HomePage homePage = new HomePage(driver).GoToShoppingCartPage().EnterInputFieldForFirstProduct(data);
+            string actual = new ShoppingCartPage(driver).GetInputFieldForFirstProductText();
+            DeleteProductFromShoppingCart();
+            Assert.AreEqual(expected, actual);
+        }
+
+        public void CheckInputFieldEmptyShoppingCart(string data)
+        {
+            VerifyOneProductAdding();
+            HomePage homePage = new HomePage(driver).GoToShoppingCartPage().EnterInputFieldForFirstProduct(data);
+            VerifyEmptyShoppingCart();
+        }
+
+
+        public void VerifyInputFieldsForProduct()
+        {
+            CheckInputFieldNotEmptyShoppingCart("10.2", "10");
+            CheckInputFieldNotEmptyShoppingCart("3,9", "3");
+            CheckInputFieldNotEmptyShoppingCart("10000000000", "2147483647");
+            CheckInputFieldEmptyShoppingCart("-7");
+            CheckInputFieldEmptyShoppingCart("abc");
+            CheckInputFieldEmptyShoppingCart("");
+            CheckInputFieldEmptyShoppingCart("0");
+            CheckInputFieldEmptyShoppingCart("0.6");
+            CheckInputFieldEmptyShoppingCart("0,2");
         }
 
 
