@@ -94,6 +94,7 @@ namespace OpenCartTests.Pages
             Currency = driver.FindElement(By.CssSelector(".btn.btn-link.dropdown-toggle"));
             URL = driver.Url;
             MyAccount = driver.FindElement(By.CssSelector("a[title='My Account']"));
+            // ######
             ShoppingCartButton = driver.FindElement(By.CssSelector("a[title='Shopping Cart']"));
             SearchProductField = driver.FindElement(By.Name("search"));
             SearchProductButton = driver.FindElement(By.CssSelector("button.btn.btn-default.btn-lg"));
