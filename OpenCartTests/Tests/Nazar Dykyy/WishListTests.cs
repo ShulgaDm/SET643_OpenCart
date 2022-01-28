@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
@@ -11,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace OpenCartTests.Tests.Nazar_Dykyy
 {
+    [TestFixture]
+    [AllureNUnit]
+    [Category("WishList")]
     public class WishListTests : TestRunner
     {
         protected override string OpenCartURL { get => "http://localhost"; }
@@ -40,9 +46,12 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void EmptyWishListAfterFirstLogin()
         {
-            string expected = Wishlist_URL;
+            
             RegisterPage registerPage = new HomePage(driver).GoToRegisterPage();
 
             registerPage.FillRegisterForm(user);
@@ -50,13 +59,18 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
 
             AccountSuccessPage successPage = registerPage.ClickContinueButtonSuccess();
+            successPage.GoToWishPage();
+            WishListPage wl = new WishListPage(driver);
 
-            string actual = new WishListPage(driver).GoToWishPage()//
-                                                    .GetURL();
-            Assert.IsTrue(actual.Contains(expected));
+            string actual = wl.GetEmptyWishListMessageText();
+
+            Assert.IsTrue(actual.Contains("Your wish list is empty."));
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void InaccessibleWishListWithoutLogging()
         {
             string expected = LOGIN_URL;
@@ -69,9 +83,12 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
 
         }
         [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
         public void AddProductToWishList()
         {
-            string expected = Wishlist_URL;
+            
             string homepage = new HomePage(driver)
                                     .GoToLoginPage()
                                     .SuccessfullLogin(user1)
@@ -79,10 +96,56 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
                                     .GetFirstProductInfo()                                    
                                     .GetURL();
             ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
-            string actual = new WishListPage(driver).GoToWishPage()
-                                                     .GetURL();
-            Assert.IsTrue(actual.Contains(expected));
+            string actual = pd.GetAlertMessageText();
+            
+            
+            Assert.IsTrue(actual.Contains("You have added MacBook to your wish list!"));
 
         }
+        [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
+        public void DeleteFromWishList()
+        {
+           
+            string homepage = new HomePage(driver)
+                                    .GoToLoginPage()
+                                    .SuccessfullLogin(user1)
+                                    .GoToWishPage()
+                                    .GetURL();           
+            WishListPage wl = new WishListPage(driver);
+            wl.DeleteProduct();            
+            string actual = wl.GetAlertMessageText();
+
+            Assert.IsTrue(actual.Contains("You have modified your wish list"));
+
+
+        }     
+        [Test]
+        [AllureTag("WishList")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("ND")]
+        public void SavedProductInWishListAfterLogout()
+        {
+
+            string homepage = new HomePage(driver)
+                              .GoToLoginPage()
+                              .SuccessfullLogin(user1)
+                              .GoToHomePage()
+                              .GetFirstProductInfo()
+                              .GetURL();
+            ProductDetailsPage pd = new ProductDetailsPage(driver).AddToWishList();
+            WishListPage wp = new WishListPage(driver).GoToWishPage();
+            wp.Logout();
+            string hp = new HomePage(driver)
+                              .GoToLoginPage()
+                              .SuccessfullLogin(user1)
+                              .GoToWishPage()
+                              .GetURL();
+            WishListPage w = new WishListPage(driver);
+            string actual=w.GetTable();
+            Assert.IsTrue(actual.Contains("Image"));
+          }     
     }
 }

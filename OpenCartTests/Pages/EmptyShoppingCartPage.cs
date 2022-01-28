@@ -17,6 +17,6 @@ namespace OpenCartTests.Pages
         }
 
         public string GetEmptyShoppingCartText() => EmptyShoppingCartContent.Text;
-      
+
     }
 }

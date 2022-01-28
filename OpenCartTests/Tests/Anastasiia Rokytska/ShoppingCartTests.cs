@@ -16,10 +16,9 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
     public class ShoppingCartTests : TestRunner
     {
         private readonly string EMPTY_SHOPPING_CART_TEXT = "Your shopping cart is empty!";
-        protected override string OpenCartURL { get => "http://localhost"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
 
         User user1, user2, user3, user4;
-
 
         public User CreateUser()
         {
@@ -65,7 +64,6 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
             string actualResult = new HomePage(driver).GoToEmptyShoppingCartPage().GetEmptyShoppingCartText();
             Assert.AreEqual(EMPTY_SHOPPING_CART_TEXT, actualResult);
         }
-
 
         public void CheckInputFieldNotEmptyShoppingCart(string data, string expected)
         {

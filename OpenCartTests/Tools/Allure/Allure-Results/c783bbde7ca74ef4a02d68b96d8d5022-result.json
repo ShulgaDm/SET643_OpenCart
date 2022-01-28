@@ -1,0 +1,80 @@
+{
+  "uuid": "1d890d5d-9f69-47cc-b41c-693c470af166-tr-0-1025",
+  "historyId": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.SubCategoryTest",
+  "fullName": "OpenCartTests.Tests.Cristina_Budzinska.SearchPageTest.SubCategoryTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-2CRO4VD"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Cristina_Budzinska"
+    },
+    {
+      "name": "testMethod",
+      "value": "SubCategoryTest"
+    },
+    {
+      "name": "testClass",
+      "value": "SearchPageTest"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "tag",
+      "value": "SearchPage"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "BudCr"
+    }
+  ],
+  "links": [],
+  "name": "SubCategoryTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "SubCategoryTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "SubCategoryTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "97e9d0c99c4a467ba6a45e66153dae08-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642454028901,
+      "stop": 1642454058571
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642454028901,
+  "stop": 1642454058571
+}

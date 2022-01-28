@@ -1,0 +1,80 @@
+{
+  "uuid": "1de16af3-3d3f-40b1-95d6-aba327493d97-tr-0-1016",
+  "historyId": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.LaptopsAndNotebooksCategoryTest",
+  "fullName": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.LaptopsAndNotebooksCategoryTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Sereda_Natalia"
+    },
+    {
+      "name": "testMethod",
+      "value": "LaptopsAndNotebooksCategoryTest"
+    },
+    {
+      "name": "testClass",
+      "value": "CategoriesTests"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "tag",
+      "value": "Category"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "SN"
+    }
+  ],
+  "links": [],
+  "name": "LaptopsAndNotebooksCategoryTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "LaptopsAndNotebooksCategoryTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LaptopsAndNotebooksCategoryTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "521c0a8d4d414ea0bb2ec9bea3f05546-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642446113900,
+      "stop": 1642446118119
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642446113900,
+  "stop": 1642446118119
+}

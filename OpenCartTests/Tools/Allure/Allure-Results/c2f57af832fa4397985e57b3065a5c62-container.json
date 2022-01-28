@@ -1,0 +1,46 @@
+{
+  "uuid": "0707d2ff-ea55-4b15-8d85-e702e9f22ead-tc-0-1013",
+  "name": "OpenCartTests.Tests.Sereda_Natalia.CategoriesTests.CategoryRebuildTest",
+  "children": [
+    "588080a6-483a-4a11-b591-5f163b8796c3-tr-0-1018"
+  ],
+  "befores": [
+    {
+      "name": "StartChrome",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446049649,
+      "stop": 1642446049649
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterAllMethods",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642446049661,
+      "stop": 1642446049661
+    }
+  ],
+  "links": [],
+  "start": 1642446043680,
+  "stop": 1642446049795
+}

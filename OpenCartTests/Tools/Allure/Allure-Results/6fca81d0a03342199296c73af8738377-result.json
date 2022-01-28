@@ -1,0 +1,80 @@
+{
+  "uuid": "7ecaf28f-8775-48d8-ac98-9c67cb746601-tr-0-1014",
+  "historyId": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.AddProductToWishList",
+  "fullName": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.AddProductToWishList",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-0LHUVFI"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Nazar_Dykyy"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddProductToWishList"
+    },
+    {
+      "name": "testClass",
+      "value": "WishListTests"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "tag",
+      "value": "WishList"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "ND"
+    }
+  ],
+  "links": [],
+  "name": "AddProductToWishList",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "AddProductToWishList"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddProductToWishList",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ba1237df4e9a42f38780f8582f8b5e2e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642503549241,
+      "stop": 1642503607902
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642503549240,
+  "stop": 1642503607917
+}

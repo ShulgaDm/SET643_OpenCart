@@ -1,0 +1,61 @@
+{
+  "uuid": "b3e311e5-6578-445b-86da-ee5a53adea30-tc-0-1011",
+  "name": "OpenCartTests.Tests.Nazar_Dykyy.WishListTests.AddProductToWishList",
+  "children": [
+    "85ab871b-01ca-4388-9000-5f754226c9f8-tr-0-1014"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642502818823,
+      "stop": 1642502818823
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverException : unknown error: cannot determine loading status\nfrom disconnected: unable to send message to renderer\n  (Session info: chrome=97.0.4692.71)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(String url)\r\n   at OpenCartTests.Tools.TestRunner.BeforeEachMethod() in C:\\Users\\User\\OneDrive - lnu.edu.ua\\Робочий стіл\\SOFTSERVE\\Demo3\\OpenCartTests\\Tools\\TestRunner.cs:line 25"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642502818824,
+      "stop": 1642502818824
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642502818825,
+      "stop": 1642502818825
+    }
+  ],
+  "links": [],
+  "start": 1642502808039,
+  "stop": 1642502818915
+}

@@ -108,7 +108,7 @@ namespace OpenCartTests.Pages
             CamerasCategory = driver.FindElement(By.LinkText("Cameras"));
             MP3PlayersCategory = driver.FindElement(By.LinkText("MP3 Players"));
             HomePageButton = driver.FindElement(By.Id("logo"));
-            WishlistButton = driver.FindElement(By.XPath("//i[@class='fa fa-heart']"));
+            WishlistButton = driver.FindElement(By.CssSelector("#wishlist-total > span"));
         }
 
         // Atomic Methods
@@ -248,11 +248,25 @@ namespace OpenCartTests.Pages
 
         }
 
-        public HomePage ChangeCurrency()
+        public HomePage ChangeCurrencyOnHomePage()
         {
             ClickCurrencyOptionByPartialName("Euro");
 
             return new HomePage(driver);
+        }
+
+        public ProductDetailsPage ChangeCurrencyOnDetailsPage()
+        {
+            ClickCurrencyOptionByPartialName("Euro");
+
+            return new ProductDetailsPage(driver);
+        }
+
+        public WishListPage ChangeCurrencyOnWishListPage()
+        {
+            ClickCurrencyOptionByPartialName("Euro");
+
+            return new WishListPage(driver);
         }
     }
 }
