@@ -1,0 +1,76 @@
+{
+  "uuid": "64025542-7a6a-4d2f-8231-6e5e9b55ea15-tc-0-1035",
+  "name": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.EmptyShoppingCartWithoutLogging",
+  "children": [
+    "6716dced-c029-486e-8fde-a8159a57f5db-tr-0-1036"
+  ],
+  "befores": [
+    {
+      "name": "BeforeAllMethods",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642670453148,
+      "stop": 1642670453148
+    },
+    {
+      "name": "BeforeEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642670453148,
+      "stop": 1642670453148
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterEachMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642670453148,
+      "stop": 1642670453148
+    },
+    {
+      "name": "AfterAllMethods",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1642670453148,
+      "stop": 1642670453148
+    }
+  ],
+  "links": [],
+  "start": 1642670449883,
+  "stop": 1642670453149
+}

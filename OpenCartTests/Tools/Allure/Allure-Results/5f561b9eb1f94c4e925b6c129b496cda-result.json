@@ -1,0 +1,80 @@
+{
+  "uuid": "1ab76a82-a679-4bcd-ba28-a0676bdfc2a9-tr-0-1041",
+  "historyId": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.DeletePoductFromShoppingCartWithLogging",
+  "fullName": "OpenCartTests.Tests.Anastasiia_Rokytska.ShoppingCartTests.DeletePoductFromShoppingCartWithLogging",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KLLKES4"
+    },
+    {
+      "name": "package",
+      "value": "OpenCartTests.Tests.Anastasiia_Rokytska"
+    },
+    {
+      "name": "testMethod",
+      "value": "DeletePoductFromShoppingCartWithLogging"
+    },
+    {
+      "name": "testClass",
+      "value": "ShoppingCartTests"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "tag",
+      "value": "ShoppingCart"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AR"
+    }
+  ],
+  "links": [],
+  "name": "DeletePoductFromShoppingCartWithLogging",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "DeletePoductFromShoppingCartWithLogging"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "DeletePoductFromShoppingCartWithLogging",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "09a605f1b3a7440db01c3772bd95ef60-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1642670222411,
+      "stop": 1642670335524
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1642670222411,
+  "stop": 1642670335524
+}
