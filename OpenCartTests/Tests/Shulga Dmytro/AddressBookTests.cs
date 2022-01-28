@@ -13,7 +13,7 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
     [Category("AddressBook")]
     public class AddressBookTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://cart"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
         public readonly string LOGIN_URL = "index.php?route=account/login";
         public readonly string ADDRESS_BOOK_URL = "index.php?route=account/address";
         public readonly string EXPECTED_SUCCESSFULL_ADD_ADDRESS_MESSAGE = 

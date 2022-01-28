@@ -12,7 +12,7 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
     public class LoginTest : TestRunner
     {
 
-        protected override string OpenCartURL { get => "http://localhost/opencart3/upload"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
 
         private const string EXPECTED_CHANGE_YOUR_PASSWORD = "Change your password";
         private const string EXPECTED_WARNING_LOGIN = "Warning: No match for E-Mail Address and/or Password.";

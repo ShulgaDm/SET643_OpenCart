@@ -16,7 +16,7 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
     [TestFixture]
     public class ProductComparisonTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://localhost/opencart3/upload"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
         private const string EXPECTED_CATEGORY = "Phones & PDAs";
         private const int EXPECTED_COUNT_OF_PRODUCTS = 3;
         private readonly double[] EXPECTED_PRICES = new double[] {122, 123.2, 337.99};

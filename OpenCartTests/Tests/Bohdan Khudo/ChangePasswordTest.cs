@@ -11,7 +11,7 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
     {
         protected override string OpenCartURL
         {
-            get => "http://localhost/opencart3/upload";
+            get => "http://34.136.246.110";
         }
         
 

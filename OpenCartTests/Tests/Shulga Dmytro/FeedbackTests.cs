@@ -13,7 +13,7 @@ namespace OpenCartTests.Tests.Shulga_Dmytro
     [Category("Feedback")]
     public class FeedbackTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://cart"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
         public readonly string EXPECTED_NO_REVIEWS_MESSAGE = "There are no reviews for this product.";
         public readonly string EXPECTED_SUCCESSFULL_ADD_REVIEW_MESSAGE =
                     "Thank you for your review. It has been submitted to the webmaster for approval.";

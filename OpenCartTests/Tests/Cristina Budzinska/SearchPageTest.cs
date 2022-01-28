@@ -18,7 +18,7 @@ namespace OpenCartTests.Tests.Cristina_Budzinska
     [Category("SearchPage")]
     public class SearchPageTest : TestRunner
     {
-        protected override string OpenCartURL { get => "http://opencart"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
         private readonly string TAG_ATTRIBUTE_CLASS = "class";
         private readonly string OPTION_ACTIVE = "active";
 

@@ -7,7 +7,7 @@ namespace OpenCartTests.Tests.Yurii_Kanafotskyi
 {
     public class CurrencyTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://localhost"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
 
         User user;
 

@@ -17,8 +17,8 @@ namespace OpenCartTests.Tests.Sereda_Natalia
     [TestFixture]
   class CategoriesTests
     {
-        private readonly string URL = "http://localhost";
-        private readonly string AdminURL = "http://localhost/admin/";
+        private readonly string URL = "http://34.136.246.110";
+        private readonly string AdminURL = "http://34.136.246.110/admin/";
         public readonly string EXPECTED_SUCCESSFULL_REBUILD_MESSAGE =
                                         "Success: You have modified categories!";
         private IWebDriver driver;

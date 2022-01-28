@@ -15,9 +15,9 @@ namespace OpenCartTests.Tests.Anastasiia_Rokytska
     [Category("ShoppingCart")]
     public class ShoppingCartTests : TestRunner
     {
-        //protected override string OpenCartURL { get => "http://localhost/index.php?route=checkout/cart"; }
+        //protected override string OpenCartURL { get => "http://34.136.246.110/index.php?route=checkout/cart"; }
         private readonly string EMPTY_SHOPPING_CART_TEXT = "Your shopping cart is empty!";
-        protected override string OpenCartURL { get => "http://localhost"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
 
         User user1, user2, user3, user4;
 

@@ -19,7 +19,7 @@ namespace OpenCartTests.Tests.Nazar_Dykyy
     [Category("WishList")]
     public class WishListTests : TestRunner
     {
-        protected override string OpenCartURL { get => "http://localhost"; }
+        protected override string OpenCartURL { get => "http://34.136.246.110"; }
         public readonly string Wishlist_URL = "index.php?route=account/wishlist";
         public readonly string LOGIN_URL = "index.php?route=account/login";
         
