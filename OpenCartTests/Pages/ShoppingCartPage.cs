@@ -27,6 +27,7 @@ namespace OpenCartTests.Pages
         public void ClickDeleteProductButton() => DeleteProductButton.Click();
 
 
+
         public HomePage DeleteProduct()
         {
             ClickDeleteProductButton();
