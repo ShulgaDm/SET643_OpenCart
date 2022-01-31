@@ -26,7 +26,10 @@ namespace OpenCartTests.Tests.Sereda_Natalia
         [OneTimeSetUp]
         public void StartChrome()
         {
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("headless");
+            options.AddArguments("disable-gpu");
+            driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
@@ -126,7 +129,7 @@ namespace OpenCartTests.Tests.Sereda_Natalia
             driver.Navigate().GoToUrl(AdminURL);
             LogInAsAdminPage logInAsAdminPage = new LogInAsAdminPage(driver);
             string UserName = "user";
-            string Password = "bitnami";
+            string Password = "nhaJ8ArQ4xvu";
             logInAsAdminPage.LogInAsAdminWithCredites(UserName, Password);
             AdminDashboardPage adminDashboardPage = logInAsAdminPage.ClickOnLogInButton();
             string exepcted = EXPECTED_SUCCESSFULL_REBUILD_MESSAGE;

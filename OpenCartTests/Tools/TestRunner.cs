@@ -18,8 +18,10 @@ namespace OpenCartTests.Tools
         [SetUp]
         public void BeforeEachMethod()
         {
-
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("headless");
+            options.AddArguments("disable-gpu");
+            driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(OpenCartURL);
