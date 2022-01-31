@@ -1,18 +1,17 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
 using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
-using OpenQA.Selenium.Support.UI;
 using System.Threading;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
+
 
 namespace OpenCartTests.Tests.Bohdan_Khudo
 {
 
+    [AllureNUnit]
+    [Category("ProductComparison")]
     [TestFixture]
     public class ProductComparisonTests : TestRunner
     {
@@ -20,8 +19,11 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
         private const string EXPECTED_CATEGORY = "Phones & PDAs";
         private const int EXPECTED_COUNT_OF_PRODUCTS = 3;
         private readonly double[] EXPECTED_PRICES = new double[] {122, 123.2, 337.99};
-        
-        
+
+
+        [AllureTag("ProductComparison")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
         [Test]
         public void CategoryCheckTest()
         {
@@ -31,7 +33,10 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
 
             Assert.AreEqual(EXPECTED_CATEGORY, categoryPage.GetLastBreadcrumbText());
         }
-        
+
+        [AllureTag("ProductComparison")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
         [Test]
         public void CountOfSelectedProductTest()
         {
@@ -47,8 +52,11 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
             
             Assert.AreEqual($"Product Compare ({EXPECTED_COUNT_OF_PRODUCTS})", categoryPage.ProductCompareText);
         }
-        [Test]
-        
+
+        [AllureTag("ProductComparison")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
+        [Test]        
         public void ProductCompareTest()
         {
             

@@ -2,10 +2,14 @@ using NUnit.Framework;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace OpenCartTests.Tests.Bohdan_Khudo
 {
-
+    [AllureNUnit]
+    [Category("ChangePassword")]
     [TestFixture]
     public class ChangePasswordTest : TestRunner
     {
@@ -20,6 +24,9 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
         private const string NEW_PASSWORD = "school33";
         private const string EXPECTED_AlERT_MESSAGE = "Success: Your password has been successfully updated.";
 
+        [AllureTag("ChangePassword")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
         [Test]
         public void ChangePassword()
         {

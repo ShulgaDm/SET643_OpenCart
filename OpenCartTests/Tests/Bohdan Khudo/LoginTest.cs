@@ -1,13 +1,15 @@
-using System;
 using NUnit.Framework;
 using OpenCartTests.Data;
 using OpenCartTests.Pages;
 using OpenCartTests.Tools;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace OpenCartTests.Tests.Bohdan_Khudo
 {
+    [AllureNUnit]
+    [Category("Login")]
     [TestFixture]
     public class LoginTest : TestRunner
     {
@@ -17,6 +19,9 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
         private const string EXPECTED_CHANGE_YOUR_PASSWORD = "Change your password";
         private const string EXPECTED_WARNING_LOGIN = "Warning: No match for E-Mail Address and/or Password.";
 
+        [AllureTag("Login")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
         [Test]
         [TestCase(arg: new string[] { "bahdan510@gmail.com", "school22" })]
         public void LoginWithValidData(string[] userData)
@@ -31,6 +36,9 @@ namespace OpenCartTests.Tests.Bohdan_Khudo
 
         }
 
+        [AllureTag("Login")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("KhB")]
         [Test]
         [TestCase(arg: new string[] { "invalid@gmail.com", "invalid" })]
         public void LoginWithInvalidData(string[] userData)
